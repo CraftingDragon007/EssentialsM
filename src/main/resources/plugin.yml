@@ -1,0 +1,68 @@
+name: EssentialsM
+<<<<<<< Updated upstream
+version: ${project.version}
+=======
+version: 1.0-SNAPSHOT
+>>>>>>> Stashed changes
+main: ch.gamepowerx.essentialsm.EssentialsM
+api-version: 1.15
+author: CraftingDragon007
+
+commands:
+  gamemode:
+    description: Mit diesem Command kanst du deinen Spielmodus ändern!
+    aliases: [gm]
+    permission: essentialsm.gamemode
+    usage: /gamemode (surival,creative,adventure,spectator)
+  heal:
+    description: Mit diesem Command kannst du dich heilen!
+    permission: essentialsm.heal
+    usage: /heal <Spieler>
+<<<<<<< Updated upstream
+=======
+  teleport:
+    description: Mit diesem Command kannst du dich teleportieren!
+    aliases: [tp,tpo]
+    permission: essentialsm.teleport
+    usage: /teleport (Spieler|Koordinaten) <Spieler|Koordinaten>
+  fly:
+    description: Mit diesem Command kannst du Fliegen!
+    permission: essentialsm.fly
+    usage: /fly <Spieler>
+  speed:
+    description: Mit diesem Command kannst du deine Geschwindigkeit ändern!
+    permission: essentialsm.speed
+    usage: /speed (Zahl|Spieler) <Zahl>
+>>>>>>> Stashed changes
+
+permissions:
+  essentialsm.*:
+    description: Zugriff auf alle EssentialsM Commands!
+    default: op
+    children:
+      essentialsm.gamemode: true
+<<<<<<< Updated upstream
+=======
+      essentialsm.heal: true
+      essentialsm.teleport: true
+      essentialsm.fly: true
+      essentialsm.speed: true
+>>>>>>> Stashed changes
+  essentialsm.gamemode:
+    description: Zugriff auf alle Gamemodes!
+    default: op
+  essentialsm.heal:
+    description: Zugriff auf /heal
+<<<<<<< Updated upstream
+=======
+    default: op
+  essentialsm.teleport:
+    description: Zugriff auf /teleport
+    default: op
+  essentialsm.fly:
+    description: Zugriff auf /fly
+    default: op
+  essentialsm.speed:
+    description: Zugriff auf /speed
+>>>>>>> Stashed changes
+    default: op
