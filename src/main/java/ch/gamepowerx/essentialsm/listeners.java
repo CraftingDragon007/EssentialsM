@@ -9,8 +9,9 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
-import static ch.gamepowerx.essentialsm.EssentialsM.flyEnabled;
+import java.util.List;
+
+import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class listeners implements Listener {
     @EventHandler
@@ -26,11 +27,13 @@ public class listeners implements Listener {
     }
     @EventHandler
     public void onPlayerLeaveEvent(PlayerQuitEvent event){
+        for(List<Player> list : tpas.values()){
+            list.remove(event.getPlayer());
+        }
         event.setQuitMessage("");
     }
     @EventHandler
     public void onPlayerKickedEvent(PlayerKickEvent event){
         Bukkit.broadcastMessage(PREFIX+ ChatColor.GOLD+"Der Spieler "+ChatColor.RED+event.getPlayer().getName()+ChatColor.GOLD+" war \"leider\" nicht artig und wurde vom Server geworfen!");
-
     }
 }

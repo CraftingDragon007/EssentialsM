@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EssentialsM" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/killall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/spawnmob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpaaccept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpohere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/killall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/fly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/listeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gN0Z7cI90nAYWPizTMuuu3JjhR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.16113281" />
+    <property name="project.structure.side.proportion" value="0.1981352" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="EssentialsM build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructuralSearchPlugin">
+    <replaceConfiguration name="user defined" created="1598004557940" text="// &#10;// Decompiled by Procyon v0.5.36&#10;// " recursive="false" caseInsensitive="true" type="JAVA" pattern_context="default" scope_type="PROJECT" scope_descriptor="" reformatAccordingToStyle="false" shortenFQN="false" replacement="" history="1">
+      <constraint name="__context__" within="" contains="" />
+    </replaceConfiguration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="" />
+      <created>1597939794572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597939794572</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1598293962894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598293962894" />
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598026248205">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598026248205" />
+    <state width="943" height="542" key="#com.intellij.structuralsearch.plugin.ui.StructuralReplaceDialog" timestamp="1598004557929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="943" height="542" key="#com.intellij.structuralsearch.plugin.ui.StructuralReplaceDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598004557929" />
+    <state x="488" y="339" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1598004557929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="488" y="339" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598004557929" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1598004556558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598004556558" />
+    <state x="675" y="138" key="RollbackChangesDialog" timestamp="1598004793953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="675" y="138" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598004793953" />
+    <state x="432" y="94" width="1651" height="956" key="SettingsEditor" timestamp="1598201682797">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="216" y="35" width="1651" height="956" key="SettingsEditor/0.0.1920.1040/-1920.6.1920.1040@0.0.1920.1040" timestamp="1598178944003" />
+    <state x="432" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598201682797" />
+    <state x="1052" y="283" key="run.anything.popup" timestamp="1598178948497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1052" y="283" key="run.anything.popup/0.0.1920.1040/-1920.6.1920.1040@0.0.1920.1040" timestamp="1598178948497" />
+    <state x="1052" y="283" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597940736463" />
+  </component>
+</project>

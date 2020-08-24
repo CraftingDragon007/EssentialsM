@@ -1,28 +1,5 @@
 package ch.gamepowerx.essentialsm.tabcompleter;
 
-<<<<<<< Updated upstream
-import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
-import org.bukkit.entity.Player;
-
-import java.util.List;
-
-public class heal implements TabCompleter {
-    private List<String> returnArgs;
-    @Override
-    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        returnArgs.clear();
-        if(args.length==1){
-            if(!Bukkit.getOnlinePlayers().isEmpty()) {
-                for (Player player : Bukkit.getOnlinePlayers()){
-                    returnArgs.add(player.getName());
-                }
-            }
-        }
-        return returnArgs;
-=======
 import java.util.Iterator;
 import org.bukkit.entity.Player;
 import org.bukkit.Bukkit;
@@ -43,6 +20,5 @@ public class heal implements TabCompleter
             }
         }
         return this.returnArgs;
->>>>>>> Stashed changes
     }
 }

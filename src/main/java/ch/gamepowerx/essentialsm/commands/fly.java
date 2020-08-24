@@ -32,7 +32,7 @@ public class fly implements CommandExecutor {
                 if(player.getAllowFlight()){
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);
-                    sender.sendMessage(PREFIX+ ChatColor.RED+"Flugmodus von "+ChatColor.GOLD+player.getName()+ ChatColor.GREEN+" deaktiviert!");
+                    sender.sendMessage(PREFIX+ ChatColor.RED+"Flugmodus von "+ChatColor.GOLD+player.getName()+ ChatColor.RED+" deaktiviert!");
                 }else if(!player.getAllowFlight()){
                     player.setAllowFlight(true);
                     flyEnabled.put(player,true);
