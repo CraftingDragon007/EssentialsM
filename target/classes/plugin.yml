@@ -48,6 +48,19 @@ commands:
     description: Lehnt oder bricht eine Teleportierungsanfrage ab!
     permission: essentialsm.tpa
     usage: /tpadeny (Spieler)
+  invsee:
+    description: Greife auf Inventare anderer Spieler zu!
+    permission: essentialsm.invsee
+    usage: /invsee (Spieler)
+  msg:
+    description: Sende Nachrichten an andere Spieler!
+    permission: essentialsm.msg
+    usage: /msg (Spieler) (Nachricht)
+  respond:
+    description: Antworte auf eine Nachricht!
+    aliases: [r]
+    permission: essentialsm.msg
+    usage: /r (Nachricht)
 
 permissions:
   essentialsm.*:
@@ -79,4 +92,10 @@ permissions:
     default: op
   essentialsm.tpa:
     description: Zugriff auf /tpa
+    default: not op
+  essentialsm.invsee:
+    descripion: Zugriff auf /invsee
+    default: op
+  essentialsm.msg:
+    description: Zugriff auf /msg
     default: not op

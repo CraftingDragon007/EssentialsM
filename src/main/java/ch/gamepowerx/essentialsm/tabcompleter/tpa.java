@@ -13,9 +13,12 @@ public class tpa implements TabCompleter {
     private List<String> returnArgs = new ArrayList<>();
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if(!Bukkit.getOnlinePlayers().isEmpty()){
-            for(Player player:Bukkit.getOnlinePlayers()){
-                returnArgs.add(player.getName());
+        returnArgs.clear();
+        if(args.length==1) {
+            if (!Bukkit.getOnlinePlayers().isEmpty()) {
+                for (Player player : Bukkit.getOnlinePlayers()) {
+                    returnArgs.add(player.getName());
+                }
             }
         }
         return returnArgs;

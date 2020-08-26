@@ -22,7 +22,6 @@ public class tpadeny implements CommandExecutor {
                         if(tpas.get(player).contains(from)){
                             sender.sendMessage(PREFIX + ChatColor.RED + "Du hast die Teleportierungsanfrage von " + ChatColor.GOLD + from.getName() + ChatColor.RED + " abgelehnt!");
                             from.sendMessage(PREFIX + ChatColor.GOLD + sender.getName() + ChatColor.RED + " hat deine Teleportierungsanfrage abgelehnt!");
-                            from.teleport(player);
                             tpas.get(player).remove(from);
                         }else sender.sendMessage(PREFIX+ChatColor.RED+"Der Spieler "+ChatColor.GOLD+from.getName()+ChatColor.RED+" hat dir keine Teleportierungsanfrage gesendet!");
                     }else if(tpas.containsKey(from)){

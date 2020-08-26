@@ -23,7 +23,7 @@ public class tpa implements CommandExecutor {
                    if(tpas.containsKey(to)) {
                        if (!tpas.get(to).contains(from)) {
                            tpas.get(to).add(from);
-                           from.sendMessage(PREFIX+ChatColor.GREEN+"Du hast "+ChatColor.GOLD+to.getName()+ChatColor.GREEN+"eine Teleportierungsanfrage gesendet!");
+                           from.sendMessage(PREFIX+ChatColor.GREEN+"Du hast "+ChatColor.GOLD+to.getName()+ChatColor.GREEN+" eine Teleportierungsanfrage gesendet!");
                            to.sendMessage(PREFIX+ChatColor.GREEN+"Du hast eine Teleportierungsanfrage von "+ChatColor.GOLD+from.getName()+ChatColor.GREEN+" erhalten!");
                            to.sendMessage(PREFIX+ChatColor.GREEN+"Zum Annehmen " +ChatColor.GOLD+ "/tpaaccept "+from.getName()+ChatColor.GREEN +" eingeben!");
                            to.sendMessage(PREFIX+ChatColor.RED+"Zum Ablehnen "+ChatColor.GOLD+"/tpadeny "+from.getName()+ChatColor.RED+" eingeben!");

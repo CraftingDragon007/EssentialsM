@@ -20,6 +20,7 @@ public final class EssentialsM extends JavaPlugin
 
     public static HashMap<Player,Boolean> flyEnabled = new HashMap<>();
     public static HashMap<Player, ArrayList<Player>> tpas = new HashMap();
+    public static HashMap<Player,Player> lastMsg = new HashMap<>();
 
     public void onEnable() {
         EssentialsM.main = this;
@@ -43,6 +44,11 @@ public final class EssentialsM extends JavaPlugin
         this.getCommand("tpaaccept").setTabCompleter(new tpacompleter());
         this.getCommand("tpadeny").setExecutor(new tpadeny());
         this.getCommand("tpadeny").setTabCompleter(new tpacompleter());
+        this.getCommand("invsee").setExecutor(new invsee());
+        this.getCommand("invsee").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.invsee());
+        this.getCommand("msg").setExecutor(new msg());
+        this.getCommand("msg").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.msg());
+        this.getCommand("respond").setExecutor(new respond());
         Bukkit.getPluginManager().registerEvents(new listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }

@@ -30,10 +30,11 @@ public class listeners implements Listener {
         for(List<Player> list : tpas.values()){
             list.remove(event.getPlayer());
         }
+        lastMsg.values().removeIf(p -> p.equals(event.getPlayer()));
         event.setQuitMessage("");
     }
     @EventHandler
     public void onPlayerKickedEvent(PlayerKickEvent event){
-        Bukkit.broadcastMessage(PREFIX+ ChatColor.GOLD+"Der Spieler "+ChatColor.RED+event.getPlayer().getName()+ChatColor.GOLD+" war \"leider\" nicht artig und wurde vom Server geworfen!");
+        //Bukkit.broadcastMessage(PREFIX+ ChatColor.GOLD+"Der Spieler "+ChatColor.RED+event.getPlayer().getName()+ChatColor.GOLD+" war \"leider\" nicht artig und wurde vom Server geworfen!");
     }
 }
