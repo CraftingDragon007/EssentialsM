@@ -14,9 +14,11 @@ public class heal implements TabCompleter
     
     public List<String> onTabComplete(final CommandSender sender, final Command command, final String alias, final String[] args) {
         this.returnArgs.clear();
-        if (args.length == 1 && !Bukkit.getOnlinePlayers().isEmpty()) {
-            for (final Player player : Bukkit.getOnlinePlayers()) {
-                this.returnArgs.add(player.getName());
+        if (args.length == 1) {
+            if(!Bukkit.getOnlinePlayers().isEmpty()) {
+                for (final Player player : Bukkit.getOnlinePlayers()) {
+                    this.returnArgs.add(player.getName());
+                }
             }
         }
         return this.returnArgs;

@@ -16,24 +16,46 @@ public class speed implements CommandExecutor {
         if(args.length==1){
             if(sender instanceof Player) {
                 Player player = (Player) sender;
+                int speed = 1;
                 try {
-                    player.setFlySpeed(Float.parseFloat(args[0]));
-                    player.setWalkSpeed(Float.parseFloat(args[0]));
-                    sender.sendMessage(PREFIX+ ChatColor.GREEN+"Deine Geschwindigkeit wurde auf "+ChatColor.GOLD+player.getWalkSpeed()+ChatColor.GREEN+"!");
+                    try {
+                        if(args[0].equalsIgnoreCase("reset")){
+                            args[0] = "1";
+                        }
+                        speed = Integer.parseInt(args[0]);
+                        if (!(speed < 1 || speed > 10)) {
+                            speed++;
+                            player.setWalkSpeed((float) speed / 10);
+                            player.setFlySpeed((float) speed / 10);
+                            sender.sendMessage(PREFIX+ ChatColor.GREEN+"Geschwindigkeit auf "+ChatColor.GOLD+speed+ChatColor.GREEN+" gesetzt!");
+                        }else sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                    } catch (NumberFormatException e) {
+                        sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                        return true;
+                    }
                 } catch (IllegalArgumentException e) {
-                    sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                    e.printStackTrace();
                 }
             }
         }else if(args.length==2){
             if(Bukkit.getPlayer(args[0])!=null){
                 Player player = Bukkit.getPlayer(args[0]);
+                int speed = 1;
                 try {
                     assert player != null;
-                    player.setFlySpeed(Float.parseFloat(args[1]));
-                    player.setWalkSpeed(Float.parseFloat(args[1]));
-                    sender.sendMessage(PREFIX+ ChatColor.GREEN+"Geschwindigkeit von "+ChatColor.GOLD+player.getName()+ ChatColor.GREEN+" wurde auf "+ChatColor.GOLD+player.getWalkSpeed()+ChatColor.GREEN+"!");
+                    try {
+                        speed = Integer.parseInt(args[1]);
+                        if (!(speed < 1 || speed > 10)) {
+                            player.setWalkSpeed((float) speed / 10);
+                            player.setFlySpeed((float) speed / 10);
+                            sender.sendMessage(PREFIX+ ChatColor.GREEN+"Geschwindigkeit von "+ChatColor.GOLD+player.getName()+ ChatColor.GREEN+" wurde auf "+speed+ChatColor.GREEN+" gesetzt!");
+                        }else sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                    } catch (NumberFormatException e) {
+                        sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                        return true;
+                    }
                 } catch (IllegalArgumentException e) {
-                    sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                    e.printStackTrace();
                 }
             }
         }

@@ -33,27 +33,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/invsee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/msg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/respond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/invsee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/msg.java" afterDir="false" />
+    <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="Added Invsee and a few other Things.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/listeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/killall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/killall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpadeny.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpadeny.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/listeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/listeners.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/heal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/heal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/speed.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +77,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.16113281" />
     <property name="project.structure.side.proportion" value="0.1981352" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="EssentialsM build" type="MavenRunConfiguration" factoryName="Maven">
@@ -142,6 +134,14 @@
       <option name="presentableId" value="Default" />
       <updated>1597939794572</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Invsee and a few other Things.">
+      <created>1598434079296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598434079296</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +168,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Invsee and a few other Things." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Invsee and a few other Things." />
+  </component>
   <component name="WindowStateProjectService">
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1598368810801">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -189,15 +193,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598369091308" />
+    <state width="1860" height="272" key="GridCell.Tab.0.bottom" timestamp="1599320124261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599320124261" />
+    <state width="1860" height="272" key="GridCell.Tab.0.center" timestamp="1599320124261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599320124261" />
+    <state width="1860" height="272" key="GridCell.Tab.0.left" timestamp="1599320124261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599320124261" />
+    <state width="1860" height="272" key="GridCell.Tab.0.right" timestamp="1599320124261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599320124261" />
     <state x="675" y="138" key="RollbackChangesDialog" timestamp="1598004793953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="675" y="138" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598004793953" />
-    <state x="70" y="90" width="1651" height="956" key="SettingsEditor" timestamp="1598349394241">
+    <state x="70" y="90" width="1651" height="956" key="SettingsEditor" timestamp="1599312460982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="216" y="35" width="1651" height="956" key="SettingsEditor/0.0.1920.1040/-1920.6.1920.1040@0.0.1920.1040" timestamp="1598178944003" />
-    <state x="70" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598349394241" />
+    <state x="70" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599312460982" />
+    <state x="294" y="404" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599312445837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="294" y="404" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1599312445837" />
     <state x="1052" y="283" key="run.anything.popup" timestamp="1598369386556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
