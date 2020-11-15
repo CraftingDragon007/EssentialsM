@@ -9,6 +9,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
+import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
+
 public class heal implements CommandExecutor
 {
     private Player target;
@@ -21,10 +23,10 @@ public class heal implements CommandExecutor
                 for (final PotionEffectType potionEffect : PotionEffectType.values()) {
                     this.target.removePotionEffect(potionEffect);
                 }
-                sender.sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Du hast den Spieler " + ChatColor.GOLD + this.target.getName() + ChatColor.GREEN + " geheilt!");
+                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("&", target.getName()));
             }
             else {
-                sender.sendMessage(EssentialsM.PREFIX + ChatColor.RED + "Du kannst nur Spieler heilen!");
+                sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/heal <Player>"));
             }
         }
         else if (args.length == 1) {
@@ -35,14 +37,14 @@ public class heal implements CommandExecutor
                 for (final PotionEffectType potionEffect : PotionEffectType.values()) {
                     this.target.removePotionEffect(potionEffect);
                 }
-                sender.sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Du hast den Spieler " + ChatColor.GOLD + this.target.getName() + ChatColor.GREEN + " geheilt!");
+                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("&", target.getName()));
             }
             else {
-                sender.sendMessage(EssentialsM.PREFIX + ChatColor.RED + "Der Spieler wurde nicht gefunden!");
+                sender.sendMessage(EssentialsM.PREFIX + getLang("PlayerNotFound"));
             }
         }
         else {
-            sender.sendMessage(EssentialsM.PREFIX + ChatColor.RED + "Ung\u00fcltige Argumente! Bitte verwende:" + ChatColor.GOLD + "/heal <Spieler>" + ChatColor.RED + "!");
+            sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/heal <Player>"));
         }
         return true;
     }

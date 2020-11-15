@@ -7,8 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
-import static ch.gamepowerx.essentialsm.EssentialsM.tpas;
+import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class tpaaccept implements CommandExecutor {
     @Override
@@ -20,15 +19,15 @@ public class tpaaccept implements CommandExecutor {
                 if (from != null) {
                     if (tpas.containsKey(player)){
                         if(tpas.get(player).contains(from)){
-                            sender.sendMessage(PREFIX + ChatColor.GREEN + "Du hast die Teleportierungsanfrage von " + ChatColor.GOLD + from.getName() + ChatColor.GREEN + " angenommen!");
-                            from.sendMessage(PREFIX + ChatColor.GOLD + sender.getName() + ChatColor.GREEN + " hat deine Teleportierungsanfrage angenommen!");
+                            sender.sendMessage(PREFIX + getLang("YouAcceptedPlayerTPA").replace("%",from.getName()));
+                            from.sendMessage(PREFIX + getLang("OtherAcceptedPlayerTPA").replace("%",sender.getName()));
                             from.teleport(player);
                             tpas.get(player).remove(from);
-                        }else sender.sendMessage(PREFIX+ChatColor.RED+"Der Spieler "+ChatColor.GOLD+from.getName()+ChatColor.RED+" hat dir keine Teleportierungsanfrage gesendet!");
-                    } else sender.sendMessage(PREFIX+ChatColor.RED+"Du hast keine Teleportierungsanfragen!");
-                } else from.sendMessage(PREFIX + ChatColor.RED + "Der Spieler wurde nicht gefunden!");
-            } else sender.sendMessage(PREFIX + ChatColor.RED + "Bitte verwende: " + ChatColor.GOLD + "/tpaccept (Spieler) " + ChatColor.RED + "!");
-        }
+                        }else sender.sendMessage(PREFIX+getLang("HasNotSendTPA").replace("%",from.getName()));
+                    } else sender.sendMessage(PREFIX+getLang("YouHaveNoTPAs"));
+                } else sender.sendMessage(PREFIX + getLang("PlayerNotFound"));
+            } else sender.sendMessage(PREFIX + getLang("FalseArgs").replace("%","/tpaccept <Player>"));
+        }else sender.sendMessage(PREFIX+getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }
 }

@@ -1,5 +1,6 @@
 package ch.gamepowerx.essentialsm.commands;
 
+import ch.gamepowerx.essentialsm.EssentialsM;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,8 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
-import static ch.gamepowerx.essentialsm.EssentialsM.flyEnabled;
+import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class fly implements CommandExecutor {
     @Override
@@ -19,27 +19,30 @@ public class fly implements CommandExecutor {
                 if(player.getAllowFlight()){
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);
-                    sender.sendMessage(PREFIX+ ChatColor.RED+"Flugmodus deaktiviert!");
+                    String[] text = getLang("SetPlayerFlyMode").split("%");
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Disabled"));
                 }else if(!player.getAllowFlight()){
                     player.setAllowFlight(true);
-                    flyEnabled.put(player,true);
-                    sender.sendMessage(PREFIX+ ChatColor.GREEN+"Flugmodus aktiviert!");
+                    String[] text = getLang("SetPlayerFlyMode").split("%");
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
                 }
-            }
+            }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/fly <Player>"));
         }else if(args.length==1){
             if(Bukkit.getPlayer(args[0])!=null){
                 Player player = Bukkit.getPlayer(args[0]);
                 if(player.getAllowFlight()){
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);
-                    sender.sendMessage(PREFIX+ ChatColor.RED+"Flugmodus von "+ChatColor.GOLD+player.getName()+ ChatColor.RED+" deaktiviert!");
+                    String[] text = getLang("SetPlayerFlyMode").split("%");
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Disabled"));
                 }else if(!player.getAllowFlight()){
                     player.setAllowFlight(true);
                     flyEnabled.put(player,true);
-                    sender.sendMessage(PREFIX+ ChatColor.GREEN+"Flugmodus von " + ChatColor.GOLD + player.getName() +ChatColor.GREEN+ " aktiviert!");
+                    String[] text = getLang("SetPlayerFlyMode").split("%");
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
                 }
-            }
-        }
+            }else sender.sendMessage(EssentialsM.PREFIX + getLang("PlayerNotFound"));
+        }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/fly (Player)"));
         return true;
     }
 }

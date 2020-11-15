@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
+import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class invsee implements CommandExecutor {
     @Override
@@ -20,9 +21,9 @@ public class invsee implements CommandExecutor {
                     assert target != null;
                     player.openInventory(target.getInventory());
                     //sender.sendMessage(PREFIX+ ChatColor.GREEN+"Du hast "+ChatColor.GOLD+target.getName()+ChatColor.GREEN+" zu dir teleportiert!");
-                }else sender.sendMessage(PREFIX+ChatColor.RED+"Der Spieler wurde nicht gefunden!");
-            }else sender.sendMessage(PREFIX+ChatColor.RED+"Bitte verwende: "+ChatColor.GOLD+ "/invsee (Spieler)"+ChatColor.RED+"!");
-        } else sender.sendMessage(PREFIX + ChatColor.RED + "Du kannst diesen Befehl nur als Spieler ausführen!");
+                }else sender.sendMessage(PREFIX+getLang("PlayerNotFound"));
+            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%", "/invsee <Player>"));
+        } else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }
 }

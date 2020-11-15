@@ -7,11 +7,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
-import static ch.gamepowerx.essentialsm.EssentialsM.lastMsg;
+import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class msg implements CommandExecutor {
-    public static String msgPrefix = ChatColor.GOLD+"[MSG] "+ChatColor.RESET;
+    public static String msgPrefix = getLang("MSGPrefix");
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
             if (sender instanceof Player) {
@@ -30,11 +29,11 @@ public class msg implements CommandExecutor {
                     }
                     message = new StringBuilder(message.toString().replace("&", "§"));
                     assert target != null;
-                    player.sendMessage(msgPrefix+ChatColor.GREEN+"Du"+ChatColor.GOLD+" > "+ChatColor.GREEN+target.getName()+ChatColor.GOLD +"»"+ChatColor.WHITE+" "+message);
-                    target.sendMessage(msgPrefix+ChatColor.GREEN+player.getName()+ChatColor.GOLD+" > "+ChatColor.GREEN+"Dich"+ChatColor.GOLD +"»"+ChatColor.WHITE+" "+message);
-                }else sender.sendMessage(PREFIX+ChatColor.RED+"Der Spieler wurde nicht gefunden!");
-            }else sender.sendMessage(PREFIX+ChatColor.RED+"Bitte verwende: "+ChatColor.GOLD+"/msg (Spieler) (Nachricht)"+ChatColor.RED+"!");
-        }else sender.sendMessage(PREFIX+ChatColor.RED+"Du musst diesen Befehl als Spieler ausführen!");
+                    player.sendMessage(msgPrefix+getLang("SendMSG").replace("%",target.getName())+message);
+                    target.sendMessage(msgPrefix+getLang("GetMSG").replace("%",player.getName())+message);
+                }else sender.sendMessage(PREFIX+getLang("PlayerNotFound"));
+            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/msg <Spieler> <Nachricht>"));
+        }else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }
 }

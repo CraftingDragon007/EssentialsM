@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
+import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class tpohere implements CommandExecutor {
     private Player target;
@@ -19,9 +20,9 @@ public class tpohere implements CommandExecutor {
                 if (Bukkit.getPlayer(args[0]) != null) {
                    target = Bukkit.getPlayer(args[0]);
                    target.teleport(player);
-                   sender.sendMessage(PREFIX+ChatColor.GREEN+"Du hast "+ChatColor.GOLD+target.getName()+ChatColor.GREEN+" zu dir teleportiert!");
+                   sender.sendMessage(PREFIX+getLang("TeleportedHere").replace("%", target.getName()));
                 }
-            } else sender.sendMessage(PREFIX + ChatColor.RED + "Du kannst diesen Befehl nur als Spieler ausführen!");
+            } else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         }
         return true;
     }

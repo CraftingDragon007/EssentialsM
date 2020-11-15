@@ -11,6 +11,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
+import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class killall implements CommandExecutor {
     @Override
@@ -28,9 +29,9 @@ public class killall implements CommandExecutor {
                        }
                     }
                 }
-                sender.sendMessage(PREFIX+ChatColor.GREEN+"Die Ausgewählten Entitäten wurden gelöscht!");
+                sender.sendMessage(PREFIX+getLang("KilledSelectedEntities"));
             } catch (IllegalArgumentException|NullPointerException e){
-                sender.sendMessage(PREFIX+ ChatColor.RED+"Ungültiges Argument!");
+                sender.sendMessage(PREFIX+ getLang("FalseArg"));
             }
         }else if(args.length==2){
             try {
@@ -42,10 +43,10 @@ public class killall implements CommandExecutor {
                             entity.remove();
                         }
                     }
-                    sender.sendMessage(PREFIX+ChatColor.GREEN+"Die Ausgewählten Entitäten wurden gelöscht!");
+                    sender.sendMessage(PREFIX+getLang("KilledSelectedEntities"));
                 }
             } catch (IllegalArgumentException|NullPointerException e){
-                sender.sendMessage(PREFIX+ ChatColor.RED+"Ungültiges Argument!");
+                sender.sendMessage(PREFIX+ getLang("FalseArg"));
             }
         }
         return true;

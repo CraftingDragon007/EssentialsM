@@ -7,8 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
-import static ch.gamepowerx.essentialsm.EssentialsM.flyEnabled;
+import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class speed implements CommandExecutor {
     @Override
@@ -27,10 +26,11 @@ public class speed implements CommandExecutor {
                             speed++;
                             player.setWalkSpeed((float) speed / 10);
                             player.setFlySpeed((float) speed / 10);
-                            sender.sendMessage(PREFIX+ ChatColor.GREEN+"Geschwindigkeit auf "+ChatColor.GOLD+speed+ChatColor.GREEN+" gesetzt!");
-                        }else sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                            String[] text = getLang("SetPlayerSpeed").split("%");
+                            sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + speed + text[2]);
+                        }else sender.sendMessage(PREFIX + getLang("FalseArg"));
                     } catch (NumberFormatException e) {
-                        sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                        sender.sendMessage(PREFIX + getLang("FalseArg"));
                         return true;
                     }
                 } catch (IllegalArgumentException e) {
@@ -48,10 +48,11 @@ public class speed implements CommandExecutor {
                         if (!(speed < 1 || speed > 10)) {
                             player.setWalkSpeed((float) speed / 10);
                             player.setFlySpeed((float) speed / 10);
-                            sender.sendMessage(PREFIX+ ChatColor.GREEN+"Geschwindigkeit von "+ChatColor.GOLD+player.getName()+ ChatColor.GREEN+" wurde auf "+speed+ChatColor.GREEN+" gesetzt!");
-                        }else sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                            String[] text = getLang("SetPlayerSpeed").split("%");
+                            sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + speed + text[2]);
+                        }else sender.sendMessage(PREFIX + getLang("FalseArg"));
                     } catch (NumberFormatException e) {
-                        sender.sendMessage(PREFIX + ChatColor.RED + "Ungültige Zahl!");
+                        sender.sendMessage(PREFIX + getLang("FalseArg"));
                         return true;
                     }
                 } catch (IllegalArgumentException e) {
