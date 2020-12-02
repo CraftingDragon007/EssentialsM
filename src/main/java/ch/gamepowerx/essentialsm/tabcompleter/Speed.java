@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class speed implements TabCompleter {
+public class Speed implements TabCompleter {
     private List<String> returnArgs = new ArrayList<>();
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {

@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
-public class teleport implements CommandExecutor {
+public class Teleport implements CommandExecutor {
     private Player target1;
     private Player target2;
     @Override

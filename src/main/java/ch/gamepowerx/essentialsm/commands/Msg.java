@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class msg implements CommandExecutor {
+public class Msg implements CommandExecutor {
     public static String msgPrefix = getLang("MSGPrefix");
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -32,7 +32,7 @@ public class msg implements CommandExecutor {
                     player.sendMessage(msgPrefix+getLang("SendMSG").replace("%",target.getName())+message);
                     target.sendMessage(msgPrefix+getLang("GetMSG").replace("%",player.getName())+message);
                 }else sender.sendMessage(PREFIX+getLang("PlayerNotFound"));
-            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/msg <Spieler> <Nachricht>"));
+            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Msg <Spieler> <Nachricht>"));
         }else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }

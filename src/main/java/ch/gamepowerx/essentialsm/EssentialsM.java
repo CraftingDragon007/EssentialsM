@@ -1,9 +1,8 @@
 package ch.gamepowerx.essentialsm;
 
 import ch.gamepowerx.essentialsm.commands.*;
-import ch.gamepowerx.essentialsm.tabcompleter.tpacompleter;
+import ch.gamepowerx.essentialsm.tabcompleter.Tpacompleter;
 import com.sun.istack.internal.NotNull;
-import com.sun.media.jfxmedia.logging.Logger;
 import org.bukkit.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.TabCompleter;
@@ -18,7 +17,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public final class EssentialsM extends JavaPlugin
 {
@@ -36,33 +34,33 @@ public final class EssentialsM extends JavaPlugin
         loadLangConfig();
         loadFallbackLangMap();
         EssentialsM.main = this;
-        PREFIX = getLang("Prefix");
-        this.getCommand("gamemode").setExecutor((CommandExecutor)new gamemode());
-        this.getCommand("gamemode").setTabCompleter((TabCompleter)new ch.gamepowerx.essentialsm.tabcompleter.gamemode());
-        this.getCommand("heal").setExecutor((CommandExecutor)new heal());
-        this.getCommand("heal").setTabCompleter((TabCompleter)new ch.gamepowerx.essentialsm.tabcompleter.heal());
-        this.getCommand("teleport").setExecutor(new teleport());
-        this.getCommand("teleport").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.teleport());
-        this.getCommand("fly").setExecutor(new fly());
-        this.getCommand("fly").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.fly());
-        this.getCommand("speed").setExecutor(new speed());
-        this.getCommand("speed").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.speed());
-        this.getCommand("tpohere").setExecutor(new tpohere());
-        this.getCommand("tpohere").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.teleport());
-        this.getCommand("killall").setExecutor(new killall());
-        this.getCommand("killall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.killall());
-        this.getCommand("tpa").setExecutor(new tpa());
-        this.getCommand("tpa").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.tpa());
-        this.getCommand("tpaaccept").setExecutor(new tpaaccept());
-        this.getCommand("tpaaccept").setTabCompleter(new tpacompleter());
-        this.getCommand("tpadeny").setExecutor(new tpadeny());
-        this.getCommand("tpadeny").setTabCompleter(new tpacompleter());
-        this.getCommand("invsee").setExecutor(new invsee());
-        this.getCommand("invsee").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.invsee());
-        this.getCommand("msg").setExecutor(new msg());
-        this.getCommand("msg").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.msg());
-        this.getCommand("respond").setExecutor(new respond());
-        Bukkit.getPluginManager().registerEvents(new listeners(),this);
+        PREFIX = getLang("prefix");
+        this.getCommand("gamemode").setExecutor(new Gamemode());
+        this.getCommand("gamemode").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Gamemode());
+        this.getCommand("heal").setExecutor(new Heal());
+        this.getCommand("heal").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Heal());
+        this.getCommand("teleport").setExecutor(new Teleport());
+        this.getCommand("teleport").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
+        this.getCommand("fly").setExecutor(new Fly());
+        this.getCommand("fly").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
+        this.getCommand("speed").setExecutor(new Speed());
+        this.getCommand("speed").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Speed());
+        this.getCommand("tpohere").setExecutor(new Tpohere());
+        this.getCommand("tpohere").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
+        this.getCommand("killall").setExecutor(new Killall());
+        this.getCommand("killall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Killall());
+        this.getCommand("tpa").setExecutor(new Tpa());
+        this.getCommand("tpa").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Tpa());
+        this.getCommand("tpaaccept").setExecutor(new Tpaaccept());
+        this.getCommand("tpaaccept").setTabCompleter(new Tpacompleter());
+        this.getCommand("tpadeny").setExecutor(new Tpadeny());
+        this.getCommand("tpadeny").setTabCompleter(new Tpacompleter());
+        this.getCommand("invsee").setExecutor(new Invsee());
+        this.getCommand("invsee").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Invsee());
+        this.getCommand("msg").setExecutor(new Msg());
+        this.getCommand("msg").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Msg());
+        this.getCommand("respond").setExecutor(new Respond());
+        Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
     
@@ -120,8 +118,8 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("SetPlayerSpeed","§aGeschwindigkeit von §6%§a wurde auf §6%§a gesetzt!");
         fallbackLangMap.put("SentPlayerTPA","§aDu hast §6%§a eine Teleportierungsanfrage gesendet!");
         fallbackLangMap.put("GetPlayerTPA","§aDu hast eine Teleportierungsanfrage von §6%§a erhalten!");
-        fallbackLangMap.put("AcceptPlayerTPA","§aZum Annehmen §6/tpaaccept %§a eingeben!");
-        fallbackLangMap.put("DenyPlayerTPA","§cZum Ablehnen §6/tpadeny %§c eingeben!");
+        fallbackLangMap.put("AcceptPlayerTPA","§aZum Annehmen §6/Tpaaccept %§a eingeben!");
+        fallbackLangMap.put("DenyPlayerTPA","§cZum Ablehnen §6/Tpadeny %§c eingeben!");
         fallbackLangMap.put("AlreadySendPlayerTPA","§cDu hast dem Spieler §6%§c schon eine Anfrage gesendet!");
         fallbackLangMap.put("YouAcceptedPlayerTPA","§aDu hast die Teleportierungsanfrage von §6%§a angenommen!");
         fallbackLangMap.put("YouDeniedPlayerTPA","§cDu hast die Teleportierungsanfrage von §6%§c abgelehnt!");

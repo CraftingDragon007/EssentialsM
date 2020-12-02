@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.command.TabCompleter;
 
-public class gamemode implements TabCompleter
+public class Gamemode implements TabCompleter
 {
     private List<String> returnArgs;
     
-    public gamemode() {
+    public Gamemode() {
         this.returnArgs = new ArrayList<String>();
     }
     

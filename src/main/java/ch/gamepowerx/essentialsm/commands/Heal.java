@@ -11,7 +11,7 @@ import org.bukkit.command.CommandExecutor;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
-public class heal implements CommandExecutor
+public class Heal implements CommandExecutor
 {
     private Player target;
     
@@ -23,10 +23,10 @@ public class heal implements CommandExecutor
                 for (final PotionEffectType potionEffect : PotionEffectType.values()) {
                     this.target.removePotionEffect(potionEffect);
                 }
-                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("&", target.getName()));
+                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("%", target.getName()));
             }
             else {
-                sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/heal <Player>"));
+                sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Heal <Player>"));
             }
         }
         else if (args.length == 1) {
@@ -37,14 +37,14 @@ public class heal implements CommandExecutor
                 for (final PotionEffectType potionEffect : PotionEffectType.values()) {
                     this.target.removePotionEffect(potionEffect);
                 }
-                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("&", target.getName()));
+                sender.sendMessage(EssentialsM.PREFIX + getLang("HealedPlayer").replace("%", target.getName()));
             }
             else {
                 sender.sendMessage(EssentialsM.PREFIX + getLang("PlayerNotFound"));
             }
         }
         else {
-            sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/heal <Player>"));
+            sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Heal <Player>"));
         }
         return true;
     }

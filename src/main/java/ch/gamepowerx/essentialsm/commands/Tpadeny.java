@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class tpaaccept implements CommandExecutor {
+public class Tpadeny implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player) {
@@ -19,15 +19,19 @@ public class tpaaccept implements CommandExecutor {
                 if (from != null) {
                     if (tpas.containsKey(player)){
                         if(tpas.get(player).contains(from)){
-                            sender.sendMessage(PREFIX + getLang("YouAcceptedPlayerTPA").replace("%",from.getName()));
-                            from.sendMessage(PREFIX + getLang("OtherAcceptedPlayerTPA").replace("%",sender.getName()));
-                            from.teleport(player);
+                            sender.sendMessage(PREFIX + getLang("YouDeniedPlayerTPA").replace("%", from.getName()));
+                            from.sendMessage(PREFIX + getLang("OtherDeniedPlayerTPA").replace("%",sender.getName()));
                             tpas.get(player).remove(from);
                         }else sender.sendMessage(PREFIX+getLang("HasNotSendTPA").replace("%",from.getName()));
-                    } else sender.sendMessage(PREFIX+getLang("YouHaveNoTPAs"));
+                    }else if(tpas.containsKey(from)){
+                     if(tpas.get(from).contains(player)){
+                         sender.sendMessage(PREFIX+getLang("CancelledPlayerTPA").replace("%", from.getName()));
+                         tpas.get(from).remove(player);
+                     }
+                    }else sender.sendMessage(PREFIX+getLang("YouHaveNoTPAs"));
                 } else sender.sendMessage(PREFIX + getLang("PlayerNotFound"));
-            } else sender.sendMessage(PREFIX + getLang("FalseArgs").replace("%","/tpaccept <Player>"));
-        }else sender.sendMessage(PREFIX+getLang("OnlyPlayersCanRunThisCommand"));
+            } else sender.sendMessage(PREFIX + getLang("FalseArgs").replace("%","/Tpadeny <Player>"));
+        }else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }
 }

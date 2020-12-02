@@ -9,14 +9,16 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class invsee implements TabCompleter {
+public class Msg implements TabCompleter {
     private List<String> returnArgs = new ArrayList<>();
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         returnArgs.clear();
-        if(!Bukkit.getOnlinePlayers().isEmpty()){
-            for(Player player:Bukkit.getOnlinePlayers()){
-                returnArgs.add(player.getName());
+        if(args.length==1) {
+            if (!Bukkit.getOnlinePlayers().isEmpty()) {
+                for (Player player : Bukkit.getOnlinePlayers()) {
+                    returnArgs.add(player.getName());
+                }
             }
         }
         return returnArgs;

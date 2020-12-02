@@ -5,15 +5,14 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerKickEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.*;
+import org.bukkit.event.server.ServerCommandEvent;
 
 import java.util.List;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class listeners implements Listener {
+public class Listeners implements Listener {
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
         event.setJoinMessage("");
@@ -36,5 +35,9 @@ public class listeners implements Listener {
     @EventHandler
     public void onPlayerKickedEvent(PlayerKickEvent event){
         //Bukkit.broadcastMessage(PREFIX+ ChatColor.GOLD+"Der Spieler "+ChatColor.RED+event.getPlayer().getName()+ChatColor.GOLD+" war \"leider\" nicht artig und wurde vom Server geworfen!");
+    }
+    @EventHandler
+    public void onCommandExecuteEvent(ServerCommandEvent event){
+        //if(event.get)
     }
 }

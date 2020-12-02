@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
-public class invsee implements CommandExecutor {
+public class Invsee implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
@@ -22,7 +22,7 @@ public class invsee implements CommandExecutor {
                     player.openInventory(target.getInventory());
                     //sender.sendMessage(PREFIX+ ChatColor.GREEN+"Du hast "+ChatColor.GOLD+target.getName()+ChatColor.GREEN+" zu dir teleportiert!");
                 }else sender.sendMessage(PREFIX+getLang("PlayerNotFound"));
-            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%", "/invsee <Player>"));
+            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%", "/Invsee <Player>"));
         } else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }

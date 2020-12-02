@@ -8,58 +8,58 @@ commands:
   gamemode:
     description: Mit diesem Command kanst du deinen Spielmodus ändern!
     aliases: [gm]
-    permission: essentialsm.gamemode
-    usage: /gamemode (surival,creative,adventure,spectator)
+    permission: essentialsm.Gamemode
+    usage: /Gamemode (surival,creative,adventure,spectator)
   heal:
     description: Mit diesem Command kannst du dich heilen!
-    permission: essentialsm.heal
-    usage: /heal <Spieler>
+    permission: essentialsm.Heal
+    usage: /Heal <Spieler>
   teleport:
     description: Mit diesem Command kannst du dich teleportieren!
     aliases: [tp,tpo]
-    permission: essentialsm.teleport
-    usage: /teleport (Spieler|Koordinaten) <Spieler|Koordinaten>
+    permission: essentialsm.Teleport
+    usage: /Teleport (Spieler|Koordinaten) <Spieler|Koordinaten>
   tpohere:
     description: Mit diesem Command kannst du Spieler zu dir teleportieren!
     aliases: [tphere,teleporthere]
-    permission: essentials.teleport
-    usage: /tpohere (Spieler)
+    permission: essentials.Teleport
+    usage: /Tpohere (Spieler)
   fly:
     description: Mit diesem Command kannst du Fliegen!
-    permission: essentialsm.fly
-    usage: /fly <Spieler>
+    permission: essentialsm.Fly
+    usage: /Fly <Spieler>
   speed:
     description: Mit diesem Command kannst du deine Geschwindigkeit ändern!
-    permission: essentialsm.speed
-    usage: /speed (Zahl|Spieler) <Zahl>
+    permission: essentialsm.Speed
+    usage: /Speed (Zahl|Spieler) <Zahl>
   killall:
     description: Tötet alle ausgweählten Entitäten!
-    permission: essentialsm.killall
-    usage: /killall (Entitäten) <Welt>
+    permission: essentialsm.Killall
+    usage: /Killall (Entitäten) <Welt>
   tpa:
     description: Sendet einem Spieler eine Teleportierungsanfrage!
-    permission: essentialsm.tpa
-    usage: /tpa (Spieler)
+    permission: essentialsm.Tpa
+    usage: /Tpa (Spieler)
   tpaaccept:
     description: Nimmt eine Teleportierungsanfrage an!
-    permission: essentials.tpa
+    permission: essentials.Tpa
     usage: /tpaccept (Spieler)
   tpadeny:
     description: Lehnt oder bricht eine Teleportierungsanfrage ab!
-    permission: essentialsm.tpa
-    usage: /tpadeny (Spieler)
+    permission: essentialsm.Tpa
+    usage: /Tpadeny (Spieler)
   invsee:
     description: Greife auf Inventare anderer Spieler zu!
-    permission: essentialsm.invsee
-    usage: /invsee (Spieler)
+    permission: essentialsm.Invsee
+    usage: /Invsee (Spieler)
   msg:
     description: Sende Nachrichten an andere Spieler!
-    permission: essentialsm.msg
-    usage: /msg (Spieler) (Nachricht)
+    permission: essentialsm.Msg
+    usage: /Msg (Spieler) (Nachricht)
   respond:
     description: Antworte auf eine Nachricht!
     aliases: [r]
-    permission: essentialsm.msg
+    permission: essentialsm.Msg
     usage: /r (Nachricht)
 
 permissions:
@@ -72,30 +72,31 @@ permissions:
       essentialsm.teleport: true
       essentialsm.fly: true
       essentialsm.speed: true
+      essentialsm.tpa: true
   essentialsm.gamemode:
     description: Zugriff auf alle Gamemodes!
     default: op
   essentialsm.heal:
-    description: Zugriff auf /heal
+    description: Zugriff auf /Heal
     default: op
   essentialsm.teleport:
-    description: Zugriff auf /teleport
+    description: Zugriff auf /Teleport
     default: op
   essentialsm.fly:
-    description: Zugriff auf /fly
+    description: Zugriff auf /Fly
     default: op
   essentialsm.speed:
-    description: Zugriff auf /speed
+    description: Zugriff auf /Speed
     default: op
   essentialsm.killall:
-    description: Zugriff auf /killall
+    description: Zugriff auf /Killall
     default: op
   essentialsm.tpa:
-    description: Zugriff auf /tpa
-    default: not op
+    description: Zugriff auf /Tpa
+    default: op
   essentialsm.invsee:
-    descripion: Zugriff auf /invsee
+    descripion: Zugriff auf /Invsee
     default: op
   essentialsm.msg:
-    description: Zugriff auf /msg
+    description: Zugriff auf /Msg
     default: not op

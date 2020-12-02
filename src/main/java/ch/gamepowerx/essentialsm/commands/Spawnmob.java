@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 
-public class spawnmob implements CommandExecutor {
+public class Spawnmob implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){

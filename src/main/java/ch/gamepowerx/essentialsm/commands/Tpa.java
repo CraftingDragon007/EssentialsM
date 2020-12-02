@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class tpa implements CommandExecutor {
+public class Tpa implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
@@ -37,7 +37,7 @@ public class tpa implements CommandExecutor {
                        to.sendMessage(PREFIX+getLang("DenyPlayerTPA").replace("%", from.getName()));
                    }
                }else sender.sendMessage(PREFIX+getLang("PlayerNotFound"));
-            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/tpa <Player>"));
+            }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Tpa <Player>"));
         }else sender.sendMessage(PREFIX+getLang("OnlyPlayersCanRunThisCommand"));
         return true;
     }

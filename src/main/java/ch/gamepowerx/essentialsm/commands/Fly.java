@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class fly implements CommandExecutor {
+public class Fly implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
@@ -26,7 +26,7 @@ public class fly implements CommandExecutor {
                     String[] text = getLang("SetPlayerFlyMode").split("%");
                     sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
                 }
-            }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/fly <Player>"));
+            }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Fly <Player>"));
         }else if(args.length==1){
             if(Bukkit.getPlayer(args[0])!=null){
                 Player player = Bukkit.getPlayer(args[0]);
@@ -42,7 +42,7 @@ public class fly implements CommandExecutor {
                     sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
                 }
             }else sender.sendMessage(EssentialsM.PREFIX + getLang("PlayerNotFound"));
-        }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/fly (Player)"));
+        }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Fly (Player)"));
         return true;
     }
 }

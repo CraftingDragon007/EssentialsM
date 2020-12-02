@@ -9,15 +9,21 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class fly implements TabCompleter {
+public class Teleport implements TabCompleter {
     private List<String> returnArgs = new ArrayList<>();
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         returnArgs.clear();
         if(args.length==1){
             if(!Bukkit.getOnlinePlayers().isEmpty()){
-                for(Player player : Bukkit.getOnlinePlayers()){
-                    returnArgs.add((player.getName()));
+                for(Player player:Bukkit.getOnlinePlayers()){
+                    returnArgs.add(player.getName());
+                }
+            }
+        }else if(args.length==2){
+            if(!Bukkit.getOnlinePlayers().isEmpty()){
+                for(Player player:Bukkit.getOnlinePlayers()){
+                    returnArgs.add(player.getName());
                 }
             }
         }

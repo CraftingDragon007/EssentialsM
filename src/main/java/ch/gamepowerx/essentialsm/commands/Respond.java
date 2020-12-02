@@ -1,7 +1,5 @@
 package ch.gamepowerx.essentialsm.commands;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,9 +7,9 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
-import static ch.gamepowerx.essentialsm.commands.msg.msgPrefix;
+import static ch.gamepowerx.essentialsm.commands.Msg.msgPrefix;
 
-public class respond implements CommandExecutor {
+public class Respond implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length >= 1) {
@@ -32,9 +30,9 @@ public class respond implements CommandExecutor {
                     assert target != null;
                     player.sendMessage(msgPrefix+getLang("SendMSG").replace("%",target.getName())+message);
                     target.sendMessage(msgPrefix+getLang("GetMSG").replace("%",player.getName())+message);
-                }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/msg <Spieler> <Nachricht>"));
+                }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Msg <Spieler> <Nachricht>"));
             }else sender.sendMessage(PREFIX+getLang("OnlyPlayersCanRunThisCommand"));
-        }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/msg <Spieler> <Nachricht>"));
+        }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Msg <Spieler> <Nachricht>"));
         return true;
     }
 }

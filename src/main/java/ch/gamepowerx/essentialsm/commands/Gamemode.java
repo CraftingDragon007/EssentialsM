@@ -11,12 +11,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
-public class gamemode implements CommandExecutor
+public class Gamemode implements CommandExecutor
 {
     private boolean succes;
     private Player target;
 
-    public gamemode() {
+    public Gamemode() {
         this.succes = true;
     }
     
@@ -44,7 +44,7 @@ public class gamemode implements CommandExecutor
                     }
                 }
                 else {
-                    sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/gamemode (survival|creative|adventure|spectator)"));
+                    sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Gamemode (survival|creative|adventure|spectator)"));
                 }
             }
             else if (args[0].equalsIgnoreCase("creative") | args[0].equalsIgnoreCase("c") | args[0].equalsIgnoreCase("1")) {
@@ -114,11 +114,11 @@ public class gamemode implements CommandExecutor
                 }
             }
             else {
-                sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/gamemode (survival|creative|adventure|spectator)"));
+                sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Gamemode (survival|creative|adventure|spectator)"));
             }
         }
         else {
-            sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/gamemode (survival|creative|adventure|spectator)"));
+            sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Gamemode (survival|creative|adventure|spectator)"));
         }
         return true;
     }

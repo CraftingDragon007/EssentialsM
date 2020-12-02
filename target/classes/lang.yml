@@ -1,5 +1,5 @@
 Prefix: "§6[EssentialsM] §r"
-#Bitte nicht die % Zeichen löschen!
+# Bitte nicht die % Zeichen löschen!
 SetPlayerGamemode: "§aDu hast §6%s §aGamemode auf §6% §agesetzt!"
 OnlyPlayersHaveGamemodes: "§cDu kannst nur den Gamemode von einem Spieler ändern!"
 Gamemodes:
@@ -21,8 +21,8 @@ SendMSG: "§aDu §6>§a % §6»§f "
 SetPlayerSpeed: "§aGeschwindigkeit von §6%§a wurde auf §6%§a gesetzt!"
 SentPlayerTPA: "§aDu hast §6%§a eine Teleportierungsanfrage gesendet!"
 GetPlayerTPA: "§aDu hast eine Teleportierungsanfrage von §6%§a erhalten!"
-AcceptPlayerTPA: "§aZum Annehmen §6/tpaaccept %§a eingeben!"
-DenyPlayerTPA: "§cZum Ablehnen §6/tpadeny %§c eingeben!"
+AcceptPlayerTPA: "§aZum Annehmen §6/Tpaaccept %§a eingeben!"
+DenyPlayerTPA: "§cZum Ablehnen §6/Tpadeny %§c eingeben!"
 AlreadySendPlayerTPA: "§cDu hast dem Spieler §6%§c schon eine Anfrage gesendet!"
 YouAcceptedPlayerTPA: "§aDu hast die Teleportierungsanfrage von §6%§a angenommen!"
 YouDeniedPlayerTPA: "§cDu hast die Teleportierungsanfrage von §6%§c abgelehnt!"
@@ -35,4 +35,4 @@ TeleportedHere: "§aDu hast §6%§a zu dir teleportiert!"
 OnlyPlayersCanRunThisCommand: "§cNur Spieler können diesen Befehl ausführen!"
 PlayerNotFound: "§cDer Spieler wurde nicht gefunden!"
 FalseArgs: "§cUngültige Argumente! Bitte verwende: %"
-FalseArg: "§cUngültiges Argument/e!";
+FalseArg: "§cUngültiges Argument/e!"

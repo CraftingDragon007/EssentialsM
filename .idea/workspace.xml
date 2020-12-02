@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="EssentialsM" />
+      <artifact name="EssentialsM:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -34,29 +34,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="Added Invsee and a few other Things.">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EssentialsM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EssentialsM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EssentialsM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EssentialsM_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/fly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/gamemode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/heal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/invsee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/invsee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/killall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/killall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/msg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/respond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/respond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/teleport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpaaccept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpaaccept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpohere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpohere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Fly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/invsee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Invsee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/killall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Killall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/respond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Respond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/spawnmob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Spawnmob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Teleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpaaccept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpaaccept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpadeny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpadeny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/tpohere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpohere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/Listeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Fly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/invsee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Invsee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/killall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Killall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/msg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Teleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Tpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Tpacompleter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/fly.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/gamemode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/gamemode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/heal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/heal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/killall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/killall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/spawnmob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/spawnmob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/teleport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpaaccept.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpaaccept.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpadeny.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpadeny.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpohere.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpohere.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/listeners.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/listeners.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/fly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/gamemode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/gamemode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/heal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/heal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/killall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/killall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/speed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/teleport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/tabcompleter/tpacompleter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +136,24 @@
     <property name="project.structure.side.proportion" value="0.1981352" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.EssentialsM.jar">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ch.gamepowerx.essentialsm.Application" />
+      <module name="EssentialsM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.gamepowerx.essentialsm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EssentialsM.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/EssentialsM_jar/EssentialsM.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="EssentialsM build" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -127,6 +180,12 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.EssentialsM.jar" />
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="StructuralSearchPlugin">

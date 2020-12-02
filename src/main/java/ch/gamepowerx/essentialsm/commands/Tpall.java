@@ -1,4 +1,4 @@
 package ch.gamepowerx.essentialsm.commands;
 
-public class tpall {
+public class Tpall {
 }
