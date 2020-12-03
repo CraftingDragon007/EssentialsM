@@ -61,6 +61,14 @@ commands:
     aliases: [r]
     permission: essentialsm.Msg
     usage: /r (Nachricht)
+  spawnmob:
+    description: Spawnt einen oder mehrere Mobs
+    permission: essentialsm.spawnmob
+    usage: /spawnmob (Typ) <Anzahl>
+  tpall:
+    description: Teleportiert alle Spieler zu dir!
+    permission: essentialsm.tpall
+    usage: /tpall <Spieler>
 
 permissions:
   essentialsm.*:
@@ -73,6 +81,11 @@ permissions:
       essentialsm.fly: true
       essentialsm.speed: true
       essentialsm.tpa: true
+      essentialsm.killall: true
+      essentialsm.invsee: true
+      essentialsm.msg: true
+      essentialsm.spawnmob: true
+      essentialsm.tpall: true
   essentialsm.gamemode:
     description: Zugriff auf alle Gamemodes!
     default: op
@@ -100,3 +113,9 @@ permissions:
   essentialsm.msg:
     description: Zugriff auf /Msg
     default: not op
+  essentialsm.spawnmob:
+    description: Zugriff auf /spawnmob
+    default: op
+  essentialsm.tpall:
+    description: Zugriff auf /tpall
+    default: op

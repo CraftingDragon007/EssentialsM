@@ -23,7 +23,7 @@ public class Tpohere implements CommandExecutor {
                    sender.sendMessage(PREFIX+getLang("TeleportedHere").replace("%", target.getName()));
                 }
             } else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));
-        }
+        }sender.sendMessage(PREFIX+getLang("FalseArg"));
         return true;
     }
 }

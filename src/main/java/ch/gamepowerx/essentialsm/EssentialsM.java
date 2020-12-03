@@ -34,7 +34,7 @@ public final class EssentialsM extends JavaPlugin
         loadLangConfig();
         loadFallbackLangMap();
         EssentialsM.main = this;
-        PREFIX = getLang("prefix");
+        PREFIX = getLang("Prefix");
         this.getCommand("gamemode").setExecutor(new Gamemode());
         this.getCommand("gamemode").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Gamemode());
         this.getCommand("heal").setExecutor(new Heal());
@@ -60,6 +60,10 @@ public final class EssentialsM extends JavaPlugin
         this.getCommand("msg").setExecutor(new Msg());
         this.getCommand("msg").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Msg());
         this.getCommand("respond").setExecutor(new Respond());
+        this.getCommand("spawnmob").setExecutor(new Spawnmob());
+        this.getCommand("spawnmob").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Spawnmob());
+        this.getCommand("tpall").setExecutor(new Tpall());
+        this.getCommand("tpall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
         Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
@@ -129,6 +133,9 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("HasNotSendTPA","§cDer Spieler §6%§a hat dir keine Teleportierungsanfrage gesendet!");
         fallbackLangMap.put("YouHaveNoTPAs","§cDu hast keine Teleportierungsanfragen!");
         fallbackLangMap.put("TeleportedHere","§aDu hast §6%§a zu dir teleportiert!");
+        fallbackLangMap.put("SpawnedMobs", "§aEs wurde/n % gespawnt!");
+        fallbackLangMap.put("AllPlayers", "alle Spieler");
+
         fallbackLangMap.put("OnlyPlayersCanRunThisCommand","§cNur Spieler können diesen Befehl ausführen!");
         fallbackLangMap.put("PlayerNotFound","§cDer Spieler wurde nicht gefunden!");
         fallbackLangMap.put("FalseArgs","§cUngültige Argumente! Bitte verwende: %");

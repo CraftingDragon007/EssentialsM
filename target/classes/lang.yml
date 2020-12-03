@@ -32,6 +32,8 @@ CancelledPlayerTPA: "§cDu hast deine Teleportierungsanfrage an §6%§c abgebroc
 HasNotSendTPA: "§cDer Spieler §6%§a hat dir keine Teleportierungsanfrage gesendet!"
 YouHaveNoTPAs: "§cDu hast keine Teleportierungsanfragen!"
 TeleportedHere: "§aDu hast §6%§a zu dir teleportiert!"
+AllPlayers: "alle Spieler"
+SpawnedMobs: "§aEs wurde/n % gespawnt!"
 OnlyPlayersCanRunThisCommand: "§cNur Spieler können diesen Befehl ausführen!"
 PlayerNotFound: "§cDer Spieler wurde nicht gefunden!"
 FalseArgs: "§cUngültige Argumente! Bitte verwende: %"

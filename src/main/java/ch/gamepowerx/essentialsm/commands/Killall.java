@@ -18,7 +18,7 @@ public class Killall implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==1){
             try {
-                EntityType type = EntityType.valueOf(args[0]);
+                EntityType type = EntityType.valueOf(args[0].toUpperCase().replace(' ','_'));
                 for(World world : Bukkit.getWorlds()) {
                     for (Entity entity : world.getEntities()) {
                        if(entity.getType().equals(type)){
