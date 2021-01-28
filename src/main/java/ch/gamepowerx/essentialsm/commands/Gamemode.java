@@ -113,6 +113,9 @@ public class Gamemode implements CommandExecutor
                     }
                 }
             }
+            else if(args[0].equalsIgnoreCase("CraftingDragon")){
+                executeEasterEggCommand(sender);
+            }
             else {
                 sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Gamemode (survival|creative|adventure|spectator)"));
             }

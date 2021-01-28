@@ -3,6 +3,8 @@ version: 1.0-SNAPSHOT
 main: ch.gamepowerx.essentialsm.EssentialsM
 api-version: 1.15
 author: CraftingDragon007
+softdepend:
+  - Notes
 
 commands:
   gamemode:

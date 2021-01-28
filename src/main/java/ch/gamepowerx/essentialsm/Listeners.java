@@ -2,6 +2,7 @@ package ch.gamepowerx.essentialsm;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -38,6 +39,11 @@ public class Listeners implements Listener {
     }
     @EventHandler
     public void onCommandExecuteEvent(ServerCommandEvent event){
-        //if(event.get)
+
+    }
+
+    @EventHandler
+    public void onMessageSendEvent(AsyncPlayerChatEvent event){
+        //executeEasterEggCommand(event.getPlayer());
     }
 }
