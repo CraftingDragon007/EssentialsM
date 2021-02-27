@@ -44,7 +44,7 @@ public class Gamemode implements CommandExecutor
                     }
                 }
                 else {
-                    sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Gamemode (survival|creative|adventure|spectator)"));
+                    sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/gamemode (survival|creative|adventure|spectator)"));
                 }
             }
             else if (args[0].equalsIgnoreCase("creative") | args[0].equalsIgnoreCase("c") | args[0].equalsIgnoreCase("1")) {

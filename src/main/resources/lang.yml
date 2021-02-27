@@ -13,7 +13,7 @@ FlyModes:
   Enabled: "aktiviert"
 TeleportedPlayer: "§aDu hast §6%§a zu §6%§a teleportiert!"
 InvalidCoordinates: "§cUngültige Koordinaten!"
-HealedPlayer: "§aDu hast den Spieler §6%§a geheilt!"
+HealedPlayer: "§aDu hast §6%§a geheilt!"
 KilledSelectedEntities: "§aDie Ausgewählten Entitäten wurden gelöscht!"
 MSGPrefix: "§6[MSG] §r"
 GetMSG: "§a% §6> §aDich §6»§f "
