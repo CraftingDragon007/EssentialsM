@@ -18,6 +18,7 @@
 
 package ch.gamepowerx.essentialsm.commands;
 
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -48,6 +49,7 @@ public class Respond implements CommandExecutor {
                     assert target != null;
                     player.sendMessage(msgPrefix+getLang("SendMSG").replace("%",target.getName())+message);
                     target.sendMessage(msgPrefix+getLang("GetMSG").replace("%",player.getName())+message);
+                    target.playSound(target.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1,1);
                 }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Msg <Spieler> <Nachricht>"));
             }else sender.sendMessage(PREFIX+getLang("OnlyPlayersCanRunThisCommand"));
         }else sender.sendMessage(PREFIX+getLang("FalseArgs").replace("%","/Msg <Spieler> <Nachricht>"));

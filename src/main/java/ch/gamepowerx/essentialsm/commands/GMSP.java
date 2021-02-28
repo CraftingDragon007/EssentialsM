@@ -35,14 +35,14 @@ public class GMSP implements CommandExecutor {
         if(args.length==0){
             if(sender instanceof Player){
                 Player player = (Player) sender;
-                player.setGameMode(GameMode.ADVENTURE);
+                player.setGameMode(GameMode.SPECTATOR);
                 String[] text = getLang("SetPlayerGamemode").split("%");
                 sender.sendMessage(EssentialsM.PREFIX + text[0] + player.getName() + text[1] + getLang("Gamemodes.Spectator") + text[2]);
             }
         }else if(args.length==1){
             Player target = Bukkit.getPlayer(args[0]);
             if(target != null){
-                target.setGameMode(GameMode.ADVENTURE);
+                target.setGameMode(GameMode.SPECTATOR);
                 String[] text = getLang("SetPlayerGamemode").split("%");
                 sender.sendMessage(EssentialsM.PREFIX + text[0] + target.getName() + text[1] + getLang("Gamemodes.Spectator") + text[2]);
             }
