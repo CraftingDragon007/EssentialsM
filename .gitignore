@@ -2,6 +2,7 @@
 *.class
 .idea/workspace.xml
 .idea/discord.xml
-/.idea/
 /target/
 .idea
+target/classes/lang.yml
+EssentialsM.iml
