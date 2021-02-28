@@ -6,7 +6,7 @@ import java.awt.*;
 public class Application {
     public static void main(String[] args) {
         if(!GraphicsEnvironment.isHeadless())
-            System.out.println("ERROR: Dies ist ein Minecraft Plugin, keine Java Application!");
-        JOptionPane.showMessageDialog(null, "Dies ist ein Minecraft Plugin, keine Java Application!", "EssentialsM", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Dies ist ein Minecraft Plugin, keine Java Application! Du musst das Plugin auf den Server hochladen und dann den Server neustarten um diese Plugin zu verwenden!", "EssentialsM", JOptionPane.ERROR_MESSAGE);
+        System.out.println("ERROR: Dies ist ein Minecraft Plugin, keine Java Application! Du musst das Plugin auf den Server hochladen und dann den Server neustarten um diese Plugin zu verwenden!");
     }
 }

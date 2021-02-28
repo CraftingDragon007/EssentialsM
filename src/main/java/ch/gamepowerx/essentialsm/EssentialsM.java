@@ -2,11 +2,13 @@ package ch.gamepowerx.essentialsm;
 
 import ch.gamepowerx.essentialsm.commands.*;
 import ch.gamepowerx.essentialsm.tabcompleter.Tpacompleter;
+import ch.gamepowerx.notes.Notes;
+import ch.gamepowerx.notes.Song;
 import com.sun.istack.internal.NotNull;
 import org.bukkit.ChatColor;
 import org.bukkit.Bukkit;
-import org.bukkit.command.TabCompleter;
-import org.bukkit.command.CommandExecutor;
+import org.bukkit.Instrument;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -21,6 +23,7 @@ import java.util.HashMap;
 public final class EssentialsM extends JavaPlugin
 {
     public static EssentialsM main;
+    private static String version;
     public static String PREFIX;
     public static FileConfiguration getConfigFile;
     public static HashMap<Player,Boolean> flyEnabled = new HashMap<>();
@@ -34,9 +37,15 @@ public final class EssentialsM extends JavaPlugin
         loadLangConfig();
         loadFallbackLangMap();
         EssentialsM.main = this;
+        version = this.getDescription().getVersion();
         PREFIX = getLang("Prefix");
         this.getCommand("gamemode").setExecutor(new Gamemode());
         this.getCommand("gamemode").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Gamemode());
+        this.getCommand("gmc").setExecutor(new GMC());
+        this.getCommand("gms").setExecutor(new GMS());
+        this.getCommand("gma").setExecutor(new GMA());
+        this.getCommand("gmsp").setExecutor(new GMSP());
+        this.getCommand("ever").setExecutor(new EVER());
         this.getCommand("heal").setExecutor(new Heal());
         this.getCommand("heal").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Heal());
         this.getCommand("teleport").setExecutor(new Teleport());
@@ -47,6 +56,7 @@ public final class EssentialsM extends JavaPlugin
         this.getCommand("speed").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Speed());
         this.getCommand("tpohere").setExecutor(new Tpohere());
         this.getCommand("tpohere").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
+        this.getCommand("kill").setExecutor(new Kill());
         this.getCommand("killall").setExecutor(new Killall());
         this.getCommand("killall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Killall());
         this.getCommand("tpa").setExecutor(new Tpa());
@@ -75,6 +85,12 @@ public final class EssentialsM extends JavaPlugin
     public static EssentialsM getPlugin() {
         return EssentialsM.main;
     }
+
+    public static String getVersion() {
+        return version;
+    }
+
+
     
     static {
         EssentialsM.PREFIX = ChatColor.GOLD + "[EssentialsM] " + ChatColor.RESET;
@@ -97,6 +113,23 @@ public final class EssentialsM extends JavaPlugin
             langConfig.load(langConfigFile);
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void executeEasterEggCommand(CommandSender sender){
+        sender.sendMessage(PREFIX + getLang("EasterEgg"));
+        Song song = new Song("NeverGonnaGiveYouUp","RickAstley", Instrument.PIANO);
+        String[] args = ("-4T 0F# -4T 0G -4T 0A -4T 0F# -4T 0D# -8T 0D# -8T 0C# -8T -4T 0F# -4T 0G -4T 0A -4T 0F# -6T 0C# -8T 0C# -6T 0B -6T 0A# -4T 0G# -8T -4T 0F# -4T 0G# -4T 0A# -4T 0F# -6T 0B -8T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T 0B -6T 0F# -4T 0G -4T 0A -4T 0F# -8T 0D# -6T 0D# -6T 0C# -4T 0F# -4T 0G -4T 0A -4T 0F# -8T 1G -6T 0C -6T 0C -6T 0B -4T 0A -6T 0F# -4T 0G -4T 0A -4T 0F# -6T 0B -6T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T -8T 0B").split(" ");
+        if(!Notes.songs.contains(song)){
+            Notes.songs.add(song);
+        }
+        int count = 0;
+        while(count < args.length) {
+            song.addNotes(Song.parseNote(args[count]));
+            count++;
+        }
+        if(sender instanceof Player){
+            song.playSong((Player) sender);
         }
     }
 
@@ -135,19 +168,14 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("TeleportedHere","§aDu hast §6%§a zu dir teleportiert!");
         fallbackLangMap.put("SpawnedMobs", "§aEs wurde/n % gespawnt!");
         fallbackLangMap.put("AllPlayers", "alle Spieler");
+        fallbackLangMap.put("EasterEgg","§aGratuliere du hast den Easteregg Befehl gefunden!");
 
         fallbackLangMap.put("OnlyPlayersCanRunThisCommand","§cNur Spieler können diesen Befehl ausführen!");
         fallbackLangMap.put("PlayerNotFound","§cDer Spieler wurde nicht gefunden!");
         fallbackLangMap.put("FalseArgs","§cUngültige Argumente! Bitte verwende: %");
         fallbackLangMap.put("FalseArg","§cUngültiges Argument/e!");
     }
-
-    public static FileConfiguration getLangConfig() {
-        return langConfig;
-    }
-    public static String getLangWithSpace(String key){
-        return " "+langConfig.getString(key)+" ";
-    }
+    
     @NotNull
     public static String getLang(String key){
         if(langConfig.get(key)!=null) {

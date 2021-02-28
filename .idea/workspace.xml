@@ -33,18 +33,31 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="Added Invsee and a few other Things.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/tabcompleter/Spawnmob.java" afterDir="false" />
+    <list default="true" id="fd87caf7-1bbf-4f30-8310-ccc8a07b06a4" name="Default Changelist" comment="Added Easteregg and other Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/CommandUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/EVER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/GMA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/GMC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/GMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/GMSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Kill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EssentialsM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/EssentialsM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Killall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Killall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Spawnmob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Spawnmob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Teleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Teleport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpohere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/gamepowerx/essentialsm/commands/Tpohere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/EssentialsM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/gamemode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/gamemode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/heal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/heal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/speed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/teleport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpohere.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/gamepowerx/essentialsm/commands/tpohere.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,22 +96,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.Test Server/1.16.3/plugins" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Documents/SecVoiceServer JAVA" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.16113281" />
     <property name="project.structure.side.proportion" value="0.1981352" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JAR Application.EssentialsM.jar">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ch.gamepowerx.essentialsm.Application" />
       <module name="EssentialsM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.gamepowerx.essentialsm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.EssentialsM.jar" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JAR Application.EssentialsM.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598434079296</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Easteregg and other Changes">
+      <created>1611865424550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611865424550</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +207,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Invsee and a few other Things." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Invsee and a few other Things." />
+    <MESSAGE value="Added Easteregg and other Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Easteregg and other Changes" />
   </component>
 </project>

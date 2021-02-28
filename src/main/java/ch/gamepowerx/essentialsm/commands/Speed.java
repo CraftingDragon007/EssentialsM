@@ -23,8 +23,11 @@ public class Speed implements CommandExecutor {
                         }
                         speed = Integer.parseInt(args[0]);
                         if (!(speed < 1 || speed > 10)) {
+                            if(speed != 10)
                             speed++;
                             player.setWalkSpeed((float) speed / 10);
+                            if(speed != 10)
+                            speed--;
                             player.setFlySpeed((float) speed / 10);
                             String[] text = getLang("SetPlayerSpeed").split("%");
                             sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + speed + text[2]);
@@ -46,7 +49,11 @@ public class Speed implements CommandExecutor {
                     try {
                         speed = Integer.parseInt(args[1]);
                         if (!(speed < 1 || speed > 10)) {
+                            if(speed != 10)
+                                speed++;
                             player.setWalkSpeed((float) speed / 10);
+                            if(speed != 10)
+                                speed--;
                             player.setFlySpeed((float) speed / 10);
                             String[] text = getLang("SetPlayerSpeed").split("%");
                             sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + speed + text[2]);

@@ -1,8 +1,10 @@
 name: EssentialsM
-version: 1.0-SNAPSHOT
+version: 1.1.6
 main: ch.gamepowerx.essentialsm.EssentialsM
 api-version: 1.15
 author: CraftingDragon007
+softdepend:
+  - Notes
 
 commands:
   gamemode:
@@ -32,6 +34,10 @@ commands:
     description: Mit diesem Command kannst du deine Geschwindigkeit ändern!
     permission: essentialsm.Speed
     usage: /Speed (Zahl|Spieler) <Zahl>
+  kill:
+    description: Tötet die ausgweählten Entitäten oder Spieler!
+    permission: essentialsm.Kill
+    usage: /Kill (Spieler|Entität/en)
   killall:
     description: Tötet alle ausgweählten Entitäten!
     permission: essentialsm.Killall
@@ -69,6 +75,28 @@ commands:
     description: Teleportiert alle Spieler zu dir!
     permission: essentialsm.tpall
     usage: /tpall <Spieler>
+  gmc:
+    description: Setzt dich in den Gamemode Creative
+    permission: essentialsm.Gamemode
+    usage: /gmc <Spieler>
+  gms:
+    description: Setzt dich in den Gamemode Survival
+    permission: essentialsm.Gamemode
+    usage: /gms <Spieler>
+  gma:
+    description: Setzt dich in den Gamemode Adventure
+    permission: essentialsm.Gamemode
+    usage: /gma <Spieler>
+  gmsp:
+    description: Setzt dich in den Gamemode Spectator
+    permission: essentialsm.Gamemode
+    usage: /gmsp <Spieler>
+  ever:
+    description: Zeigt dir Informationen zu Essentialsm an
+    permission: essentialsm.version
+    usage: /ever
+    aliases:
+      - essentialsmversion
 
 permissions:
   essentialsm.*:
@@ -101,6 +129,9 @@ permissions:
   essentialsm.speed:
     description: Zugriff auf /Speed
     default: op
+  essentialsm.kill:
+    description: Zugriff auf /kill
+    default: op
   essentialsm.killall:
     description: Zugriff auf /Killall
     default: op
@@ -118,4 +149,7 @@ permissions:
     default: op
   essentialsm.tpall:
     description: Zugriff auf /tpall
+    default: op
+  essentialsm.version:
+    description: Zugriff auf /ever
     default: op
