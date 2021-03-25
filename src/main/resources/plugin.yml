@@ -1,5 +1,5 @@
 name: EssentialsM
-version: 1.1.6
+version: ${project.version}
 main: ch.gamepowerx.essentialsm.EssentialsM
 api-version: 1.15
 author: CraftingDragon007

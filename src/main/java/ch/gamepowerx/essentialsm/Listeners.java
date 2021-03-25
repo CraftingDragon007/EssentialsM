@@ -62,6 +62,9 @@ public class Listeners implements Listener {
 
     @EventHandler
     public void onMessageSendEvent(AsyncPlayerChatEvent event){
-        //executeEasterEggCommand(event.getPlayer());
+        Player player = event.getPlayer();
+        if(player.hasPermission("essentialsm.colorchat")){
+            event.setMessage(ChatColor.translateAlternateColorCodes('&', event.getMessage()));
+        }
     }
 }

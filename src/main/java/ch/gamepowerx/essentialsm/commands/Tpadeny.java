@@ -32,6 +32,18 @@ public class Tpadeny implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player) {
             Player player = (Player) sender;
+            if(args.length == 0){
+                Player from = tpas.get(player).get(tpas.get(player).size() - 1);
+                if (from != null) {
+                    if (tpas.containsKey(player)){
+                        if(tpas.get(player).contains(from)){
+                            sender.sendMessage(PREFIX + getLang("YouDeniedPlayerTPA").replace("%", from.getName()));
+                            from.sendMessage(PREFIX + getLang("OtherDeniedPlayerTPA").replace("%", sender.getName()));
+                            tpas.get(from).remove(player);
+                        }else sender.sendMessage(PREFIX+getLang("HasNotSendTPA").replace("%",from.getName()));
+                    } else sender.sendMessage(PREFIX+getLang("YouHaveNoTPAs"));
+                } else sender.sendMessage(PREFIX + getLang("PlayerNotFound"));
+            }else
             if (args.length == 1) {
                 Player from = Bukkit.getPlayer(args[0]);
                 if (from != null) {

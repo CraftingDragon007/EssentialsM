@@ -1,3 +1,4 @@
 Manifest-Version: 1.0
 Main-Class: ch.gamepowerx.essentialsm.Application
+Class-Path: EssentialsM.jar
 
