@@ -22,7 +22,6 @@ import ch.gamepowerx.essentialsm.commands.*;
 import ch.gamepowerx.essentialsm.tabcompleter.Tpacompleter;
 import ch.gamepowerx.notes.Notes;
 import ch.gamepowerx.notes.Song;
-import com.sun.istack.internal.NotNull;
 import org.bukkit.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Instrument;
@@ -193,8 +192,7 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("FalseArgs","§cUngültige Argumente! Bitte verwende: %");
         fallbackLangMap.put("FalseArg","§cUngültiges Argument/e!");
     }
-    
-    @NotNull
+
     public static String getLang(String key){
         if(langConfig.get(key) != null) {
             return langConfig.getString(key);

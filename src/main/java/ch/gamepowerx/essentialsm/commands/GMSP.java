@@ -19,7 +19,6 @@
 package ch.gamepowerx.essentialsm.commands;
 
 import ch.gamepowerx.essentialsm.EssentialsM;
-import com.sun.istack.internal.NotNull;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
@@ -31,7 +30,7 @@ import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class GMSP implements CommandExecutor {
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
             if(sender instanceof Player){
                 Player player = (Player) sender;
