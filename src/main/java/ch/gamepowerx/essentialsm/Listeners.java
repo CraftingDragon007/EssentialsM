@@ -18,14 +18,11 @@
 
 package ch.gamepowerx.essentialsm;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.*;
-import org.bukkit.event.server.ServerCommandEvent;
 
 import java.util.List;
 
@@ -51,18 +48,11 @@ public class Listeners implements Listener {
         lastMsg.values().removeIf(p -> p.equals(event.getPlayer()));
         event.setQuitMessage("");
     }
-    @EventHandler
-    public void onPlayerKickedEvent(PlayerKickEvent event){
-        //Bukkit.broadcastMessage(PREFIX+ ChatColor.GOLD+"Der Spieler "+ChatColor.RED+event.getPlayer().getName()+ChatColor.GOLD+" war \"leider\" nicht artig und wurde vom Server geworfen!");
-    }
-    @EventHandler
-    public void onCommandExecuteEvent(ServerCommandEvent event){
-
-    }
 
     @EventHandler
     public void onMessageSendEvent(AsyncPlayerChatEvent event){
         Player player = event.getPlayer();
+        //noinspection SpellCheckingInspection
         if(player.hasPermission("essentialsm.colorchat")){
             event.setMessage(ChatColor.translateAlternateColorCodes('&', event.getMessage()));
         }

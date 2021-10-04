@@ -20,7 +20,6 @@ package ch.gamepowerx.essentialsm.commands;
 
 import ch.gamepowerx.essentialsm.EssentialsM;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -48,6 +47,7 @@ public class Fly implements CommandExecutor {
         }else if(args.length==1){
             if(Bukkit.getPlayer(args[0])!=null){
                 Player player = Bukkit.getPlayer(args[0]);
+                assert player != null;
                 if(player.getAllowFlight()){
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);

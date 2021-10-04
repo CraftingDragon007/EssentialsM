@@ -27,7 +27,7 @@ import org.bukkit.entity.Player;
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class Msg implements CommandExecutor {
-    public static String msgPrefix = getLang("MSGPrefix");
+    public static final String msgPrefix = getLang("MSGPrefix");
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
             if (sender instanceof Player) {

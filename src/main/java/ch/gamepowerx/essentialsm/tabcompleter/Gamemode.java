@@ -18,7 +18,6 @@
 
 package ch.gamepowerx.essentialsm.tabcompleter;
 
-import java.util.Iterator;
 import org.bukkit.entity.Player;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -29,10 +28,10 @@ import org.bukkit.command.TabCompleter;
 
 public class Gamemode implements TabCompleter
 {
-    private List<String> returnArgs;
+    private final List<String> returnArgs;
     
     public Gamemode() {
-        this.returnArgs = new ArrayList<String>();
+        this.returnArgs = new ArrayList<>();
     }
     
     public List<String> onTabComplete(final CommandSender sender, final Command command, final String alias, final String[] args) {

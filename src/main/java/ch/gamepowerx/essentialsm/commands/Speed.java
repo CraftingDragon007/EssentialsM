@@ -19,7 +19,6 @@
 package ch.gamepowerx.essentialsm.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -33,7 +32,7 @@ public class Speed implements CommandExecutor {
         if(args.length==1){
             if(sender instanceof Player) {
                 Player player = (Player) sender;
-                int speed = 1;
+                int speed;
                 try {
                     try {
                         if(args[0].equalsIgnoreCase("reset")){
@@ -61,7 +60,7 @@ public class Speed implements CommandExecutor {
         }else if(args.length==2){
             if(Bukkit.getPlayer(args[0])!=null){
                 Player player = Bukkit.getPlayer(args[0]);
-                int speed = 1;
+                int speed;
                 try {
                     assert player != null;
                     try {

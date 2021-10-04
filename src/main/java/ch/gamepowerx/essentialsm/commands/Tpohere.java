@@ -19,7 +19,6 @@
 package ch.gamepowerx.essentialsm.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -29,15 +28,15 @@ import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class Tpohere implements CommandExecutor {
-    private Player target;
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==1) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if (Bukkit.getPlayer(args[0]) != null) {
-                   target = Bukkit.getPlayer(args[0]);
-                   target.teleport(player);
+                    Player target = Bukkit.getPlayer(args[0]);
+                    assert target != null;
+                    target.teleport(player);
                    sender.sendMessage(PREFIX+getLang("TeleportedHere").replace("%", target.getName()));
                 }
             } else sender.sendMessage(PREFIX + getLang("OnlyPlayersCanRunThisCommand"));

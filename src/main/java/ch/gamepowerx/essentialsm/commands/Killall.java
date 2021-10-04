@@ -19,7 +19,6 @@
 package ch.gamepowerx.essentialsm.commands;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -56,6 +55,7 @@ public class Killall implements CommandExecutor {
                 EntityType type = EntityType.valueOf(args[0]);
                 if(Bukkit.getWorld(args[1])!=null){
                     World world = Bukkit.getWorld(args[1]);
+                    assert world != null;
                     for (Entity entity : world.getEntities()) {
                         if(entity.getType().equals(type)){
                             entity.remove();

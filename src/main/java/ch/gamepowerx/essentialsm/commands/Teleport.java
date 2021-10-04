@@ -20,8 +20,6 @@ package ch.gamepowerx.essentialsm.commands;
 
 import ch.gamepowerx.essentialsm.CommandUtils;
 import ch.gamepowerx.essentialsm.EssentialsM;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -33,10 +31,10 @@ import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
 public class Teleport implements CommandExecutor {
-    private Entity target1;
-    private Entity target2;
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        Entity target1;
+        Entity target2;
         if(args.length==1){
             if(sender instanceof Player) {
                 target1 = (Player) sender;

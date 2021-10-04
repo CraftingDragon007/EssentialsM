@@ -20,7 +20,6 @@ package ch.gamepowerx.essentialsm.commands;
 
 import ch.gamepowerx.essentialsm.CommandUtils;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import ch.gamepowerx.essentialsm.EssentialsM;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Entity;
@@ -30,6 +29,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
+
+import java.util.Objects;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
@@ -43,7 +44,7 @@ public class Heal implements CommandExecutor
                 if(target.getAttribute(Attribute.GENERIC_MAX_HEALTH)==null){
                     target.setHealth(20);
                 }else
-                target.setHealth(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
+                target.setHealth(Objects.requireNonNull(target.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue());
                 if(target instanceof Player)
                     ((Player)target).setFoodLevel(20);
                 for (final PotionEffectType potionEffect : PotionEffectType.values()) {
@@ -67,7 +68,7 @@ public class Heal implements CommandExecutor
             if(target.getAttribute(Attribute.GENERIC_MAX_HEALTH)==null){
                 target.setHealth(20);
             }else
-                target.setHealth(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
+                target.setHealth(Objects.requireNonNull(target.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue());
             if(target instanceof Player)
                 ((Player)target).setFoodLevel(20);
             for (final PotionEffectType potionEffect : PotionEffectType.values()) {

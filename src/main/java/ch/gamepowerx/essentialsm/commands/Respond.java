@@ -25,7 +25,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
-import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 import static ch.gamepowerx.essentialsm.commands.Msg.msgPrefix;
 
 public class Respond implements CommandExecutor {

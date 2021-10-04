@@ -36,17 +36,18 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
+@SuppressWarnings("unused")
 public final class EssentialsM extends JavaPlugin
 {
     public static EssentialsM main;
     private static String version;
     public static String PREFIX;
     public static FileConfiguration getConfigFile;
-    public static HashMap<Player,Boolean> flyEnabled = new HashMap<>();
-    public static HashMap<Player, ArrayList<Player>> tpas = new HashMap();
-    public static HashMap<Player,Player> lastMsg = new HashMap<>();
-    private File langConfigFile;
+    public static final HashMap<Player,Boolean> flyEnabled = new HashMap<>();
+    public static final HashMap<Player, ArrayList<Player>> tpas = new HashMap<>();
+    public static final HashMap<Player,Player> lastMsg = new HashMap<>();
     private static HashMap<String,String> fallbackLangMap;
     private static FileConfiguration langConfig;
     public void onEnable() {
@@ -56,41 +57,41 @@ public final class EssentialsM extends JavaPlugin
         EssentialsM.main = this;
         version = this.getDescription().getVersion();
         PREFIX = getLang("Prefix");
-        this.getCommand("gamemode").setExecutor(new Gamemode());
-        this.getCommand("gamemode").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Gamemode());
-        this.getCommand("gmc").setExecutor(new GMC());
-        this.getCommand("gms").setExecutor(new GMS());
-        this.getCommand("gma").setExecutor(new GMA());
-        this.getCommand("gmsp").setExecutor(new GMSP());
-        this.getCommand("ever").setExecutor(new EVER());
-        this.getCommand("heal").setExecutor(new Heal());
-        this.getCommand("heal").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Heal());
-        this.getCommand("teleport").setExecutor(new Teleport());
-        this.getCommand("teleport").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
-        this.getCommand("fly").setExecutor(new Fly());
-        this.getCommand("fly").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
-        this.getCommand("speed").setExecutor(new Speed());
-        this.getCommand("speed").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Speed());
-        this.getCommand("tpohere").setExecutor(new Tpohere());
-        this.getCommand("tpohere").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
-        this.getCommand("kill").setExecutor(new Kill());
-        this.getCommand("killall").setExecutor(new Killall());
-        this.getCommand("killall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Killall());
-        this.getCommand("tpa").setExecutor(new Tpa());
-        this.getCommand("tpa").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Tpa());
-        this.getCommand("tpaaccept").setExecutor(new Tpaaccept());
-        this.getCommand("tpaaccept").setTabCompleter(new Tpacompleter());
-        this.getCommand("tpadeny").setExecutor(new Tpadeny());
-        this.getCommand("tpadeny").setTabCompleter(new Tpacompleter());
-        this.getCommand("invsee").setExecutor(new Invsee());
-        this.getCommand("invsee").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Invsee());
-        this.getCommand("msg").setExecutor(new Msg());
-        this.getCommand("msg").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Msg());
-        this.getCommand("respond").setExecutor(new Respond());
-        this.getCommand("spawnmob").setExecutor(new Spawnmob());
-        this.getCommand("spawnmob").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Spawnmob());
-        this.getCommand("tpall").setExecutor(new Tpall());
-        this.getCommand("tpall").setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
+        Objects.requireNonNull(this.getCommand("gamemode")).setExecutor(new Gamemode());
+        Objects.requireNonNull(this.getCommand("gamemode")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Gamemode());
+        Objects.requireNonNull(this.getCommand("gmc")).setExecutor(new GMC());
+        Objects.requireNonNull(this.getCommand("gms")).setExecutor(new GMS());
+        Objects.requireNonNull(this.getCommand("gma")).setExecutor(new GMA());
+        Objects.requireNonNull(this.getCommand("gmsp")).setExecutor(new GMSP());
+        Objects.requireNonNull(this.getCommand("ever")).setExecutor(new EVER());
+        Objects.requireNonNull(this.getCommand("heal")).setExecutor(new Heal());
+        Objects.requireNonNull(this.getCommand("heal")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Heal());
+        Objects.requireNonNull(this.getCommand("teleport")).setExecutor(new Teleport());
+        Objects.requireNonNull(this.getCommand("teleport")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
+        Objects.requireNonNull(this.getCommand("fly")).setExecutor(new Fly());
+        Objects.requireNonNull(this.getCommand("fly")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
+        Objects.requireNonNull(this.getCommand("speed")).setExecutor(new Speed());
+        Objects.requireNonNull(this.getCommand("speed")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Speed());
+        Objects.requireNonNull(this.getCommand("tpohere")).setExecutor(new Tpohere());
+        Objects.requireNonNull(this.getCommand("tpohere")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Teleport());
+        Objects.requireNonNull(this.getCommand("kill")).setExecutor(new Kill());
+        Objects.requireNonNull(this.getCommand("killall")).setExecutor(new Killall());
+        Objects.requireNonNull(this.getCommand("killall")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Killall());
+        Objects.requireNonNull(this.getCommand("tpa")).setExecutor(new Tpa());
+        Objects.requireNonNull(this.getCommand("tpa")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Tpa());
+        Objects.requireNonNull(this.getCommand("tpaaccept")).setExecutor(new Tpaaccept());
+        Objects.requireNonNull(this.getCommand("tpaaccept")).setTabCompleter(new Tpacompleter());
+        Objects.requireNonNull(this.getCommand("tpadeny")).setExecutor(new Tpadeny());
+        Objects.requireNonNull(this.getCommand("tpadeny")).setTabCompleter(new Tpacompleter());
+        Objects.requireNonNull(this.getCommand("invsee")).setExecutor(new Invsee());
+        Objects.requireNonNull(this.getCommand("invsee")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Invsee());
+        Objects.requireNonNull(this.getCommand("msg")).setExecutor(new Msg());
+        Objects.requireNonNull(this.getCommand("msg")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Msg());
+        Objects.requireNonNull(this.getCommand("respond")).setExecutor(new Respond());
+        Objects.requireNonNull(this.getCommand("spawnmob")).setExecutor(new Spawnmob());
+        Objects.requireNonNull(this.getCommand("spawnmob")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Spawnmob());
+        Objects.requireNonNull(this.getCommand("tpall")).setExecutor(new Tpall());
+        Objects.requireNonNull(this.getCommand("tpall")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
         Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
@@ -120,8 +121,9 @@ public final class EssentialsM extends JavaPlugin
     }
 
     private void loadLangConfig() {
-        langConfigFile = new File(getDataFolder(), "lang.yml");
+        File langConfigFile = new File(getDataFolder(), "lang.yml");
         if (!langConfigFile.exists()) {
+            //noinspection ResultOfMethodCallIgnored
             langConfigFile.getParentFile().mkdirs();
             saveResource("lang.yml", false);
         }
@@ -135,7 +137,7 @@ public final class EssentialsM extends JavaPlugin
 
     public static void executeEasterEggCommand(CommandSender sender){
         sender.sendMessage(PREFIX + getLang("EasterEgg"));
-        Song song = new Song("NeverGonnaGiveYouUp","RickAstley", Instrument.PIANO);
+        @SuppressWarnings("SpellCheckingInspection") Song song = new Song("NeverGonnaGiveYouUp","RickAstley", Instrument.PIANO);
         String[] args = ("-4T 0F# -4T 0G -4T 0A -4T 0F# -4T 0D# -8T 0D# -8T 0C# -8T -4T 0F# -4T 0G -4T 0A -4T 0F# -6T 0C# -8T 0C# -6T 0B -6T 0A# -4T 0G# -8T -4T 0F# -4T 0G# -4T 0A# -4T 0F# -6T 0B -8T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T 0B -6T 0F# -4T 0G -4T 0A -4T 0F# -8T 0D# -6T 0D# -6T 0C# -4T 0F# -4T 0G -4T 0A -4T 0F# -8T 1G -6T 0C -6T 0C -6T 0B -4T 0A -6T 0F# -4T 0G -4T 0A -4T 0F# -6T 0B -6T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T -8T 0B").split(" ");
         if(!Notes.songs.contains(song)){
             Notes.songs.add(song);
@@ -150,6 +152,7 @@ public final class EssentialsM extends JavaPlugin
         }
     }
 
+    @SuppressWarnings("SpellCheckingInspection")
     private void loadFallbackLangMap(){
         fallbackLangMap = new HashMap<>();
         fallbackLangMap.put("Prefix","§6[EssentialsM] §r");
