@@ -31,8 +31,7 @@ public class Fly implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
-            if(sender instanceof Player){
-                Player player = (Player)sender;
+            if(sender instanceof Player player){
                 if(player.getAllowFlight()){
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);

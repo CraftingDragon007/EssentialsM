@@ -26,11 +26,12 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Tpaaccept implements CommandExecutor {
+    @SuppressWarnings("SpellCheckingInspection")
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player) {
-            Player player = (Player) sender;
+        if(sender instanceof Player player) {
             if(args.length == 0){
                 Player from = tpas.get(player).get(tpas.get(player).size() - 1);
                 if (from != null) {

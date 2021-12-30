@@ -27,12 +27,12 @@ import org.bukkit.entity.Player;
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Tpohere implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==1) {
-            if (sender instanceof Player) {
-                Player player = (Player) sender;
+            if (sender instanceof Player player) {
                 if (Bukkit.getPlayer(args[0]) != null) {
                     Player target = Bukkit.getPlayer(args[0]);
                     assert target != null;

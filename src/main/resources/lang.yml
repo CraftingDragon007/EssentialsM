@@ -1,6 +1,6 @@
 Prefix: "§6[EssentialsM] §r"
 # Bitte nicht die % Zeichen löschen!
-SetPlayerGamemode: "§aDu hast §6%s §aGamemode auf §6% §agesetzt!"
+SetPlayerGamemode: "§aDu hast §6%s §aGamemode auf §6%§a gesetzt!"
 OnlyPlayersHaveGamemodes: "§cDu kannst nur den Gamemode von einem Spieler ändern!"
 Gamemodes:
   Survival: "Survival"
@@ -19,8 +19,8 @@ MSGPrefix: "§6[MSG] §r"
 GetMSG: "§a% §6> §aDich §6»§f "
 SendMSG: "§aDu §6>§a % §6»§f "
 SetPlayerSpeed: "§aGeschwindigkeit von §6%§a wurde auf §6%§a gesetzt!"
-SentPlayerTPA: "§aDu hast §6%§a eine Teleportierungsanfrage gesendet!"
-GetPlayerTPA: "§aDu hast eine Teleportierungsanfrage von §6%§a erhalten!"
+SentPlayerTPA: "§aDu hast §6%§a eine Teleportationsanfrage gesendet!"
+GetPlayerTPA: "§aDu hast eine TTeleportationsanfrage von §6%§a erhalten!"
 AcceptPlayerTPA: "§aZum Annehmen §6/Tpaaccept %§a eingeben!"
 DenyPlayerTPA: "§cZum Ablehnen §6/Tpadeny %§c eingeben!"
 AlreadySendPlayerTPA: "§cDu hast dem Spieler §6%§c schon eine Anfrage gesendet!"

@@ -28,14 +28,14 @@ import java.util.List;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.tpas;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Tpacompleter implements TabCompleter {
     private final List<String> returnArgs = new ArrayList<>();
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         returnArgs.clear();
         if(args.length==1)
-        if(sender instanceof Player) {
-            Player player = (Player)sender;
+        if(sender instanceof Player player) {
             if (tpas.containsKey(player)){
                 if(!tpas.get(player).isEmpty())
                     for(Player player1 : tpas.get(player))

@@ -27,6 +27,7 @@ import org.bukkit.entity.Player;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Invsee implements TabCompleter {
     private final List<String> returnArgs = new ArrayList<>();
     @Override

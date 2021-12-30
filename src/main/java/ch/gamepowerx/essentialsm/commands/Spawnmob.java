@@ -28,11 +28,11 @@ import org.bukkit.entity.Player;
 import static ch.gamepowerx.essentialsm.EssentialsM.PREFIX;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Spawnmob implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player){
-            Player player = (Player) sender;
+        if(sender instanceof Player player){
             try {
                 EntityType type = EntityType.valueOf(args[0].toUpperCase().replace(' ','_'));
                 String replace = type.toString().toLowerCase().replace('_', ' ');

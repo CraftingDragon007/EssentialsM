@@ -50,6 +50,7 @@ public final class EssentialsM extends JavaPlugin
     public static final HashMap<Player,Player> lastMsg = new HashMap<>();
     private static HashMap<String,String> fallbackLangMap;
     private static FileConfiguration langConfig;
+    @SuppressWarnings("SpellCheckingInspection")
     public void onEnable() {
         loadConfig();
         loadLangConfig();
@@ -137,8 +138,8 @@ public final class EssentialsM extends JavaPlugin
 
     public static void executeEasterEggCommand(CommandSender sender){
         sender.sendMessage(PREFIX + getLang("EasterEgg"));
-        @SuppressWarnings("SpellCheckingInspection") Song song = new Song("NeverGonnaGiveYouUp","RickAstley", Instrument.PIANO);
-        String[] args = ("-4T 0F# -4T 0G -4T 0A -4T 0F# -4T 0D# -8T 0D# -8T 0C# -8T -4T 0F# -4T 0G -4T 0A -4T 0F# -6T 0C# -8T 0C# -6T 0B -6T 0A# -4T 0G# -8T -4T 0F# -4T 0G# -4T 0A# -4T 0F# -6T 0B -8T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T 0B -6T 0F# -4T 0G -4T 0A -4T 0F# -8T 0D# -6T 0D# -6T 0C# -4T 0F# -4T 0G -4T 0A -4T 0F# -8T 1G -6T 0C -6T 0C -6T 0B -4T 0A -6T 0F# -4T 0G -4T 0A -4T 0F# -6T 0B -6T 0C# -6T 0A# -6T 0G# -6T 0F# -6T 0F# -6T 0C# -8T -8T 0B").split(" ");
+        Song song = new Song("NeverGonnaGiveYouUp","KekOnTheWorld", Instrument.PIANO);
+        String[] args = ("0G -4T 0A -4T 0C -4T 0A -4T 0E -8T -2T 0E -8T 0D -8T -4T 0G -4T 0A -4T 0C -4T 0A -4T 0D -8T -2T 0D -8T 0C -8T 0B -4T 0A -2T -4T 0G -4T 0A -4T 0C -4T 0A -2T -2T 0C -8T -4T 0D -8T 0B -6T 0A -4T 0G -8T -2T 0G -8T 0D -8T -4T 0C").split(" ");
         if(!Notes.songs.contains(song)){
             Notes.songs.add(song);
         }

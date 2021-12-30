@@ -26,6 +26,7 @@ import org.bukkit.entity.EntityType;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Spawnmob implements TabCompleter {
     private final List<String> returnArgs = new ArrayList<>();
     @Override

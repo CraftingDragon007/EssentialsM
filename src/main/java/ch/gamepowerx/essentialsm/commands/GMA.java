@@ -32,8 +32,7 @@ public class GMA implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==0){
-            if(sender instanceof Player){
-                Player player = (Player) sender;
+            if(sender instanceof Player player){
                 player.setGameMode(GameMode.ADVENTURE);
                 String[] text = getLang("SetPlayerGamemode").split("%");
                 sender.sendMessage(EssentialsM.PREFIX + text[0] + player.getName() + text[1] + getLang("Gamemodes.Adventure") + text[2]);

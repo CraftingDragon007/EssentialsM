@@ -30,8 +30,7 @@ public class Speed implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(args.length==1){
-            if(sender instanceof Player) {
-                Player player = (Player) sender;
+            if(sender instanceof Player player) {
                 int speed;
                 try {
                     try {

@@ -31,8 +31,7 @@ import static ch.gamepowerx.essentialsm.EssentialsM.*;
 public class Tpa implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player){
-            Player from = (Player) sender;
+        if(sender instanceof Player from){
             if(args.length==1){
                Player to = Bukkit.getPlayer(args[0]);
                if(to!=null){
