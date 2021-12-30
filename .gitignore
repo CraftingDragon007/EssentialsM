@@ -6,3 +6,5 @@
 .idea
 target/classes/lang.yml
 EssentialsM.iml
+/build/
+/.gradle/
