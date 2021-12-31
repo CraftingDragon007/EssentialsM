@@ -45,10 +45,11 @@ public final class EssentialsM extends JavaPlugin
     private static String version;
     public static String PREFIX;
     public static FileConfiguration getConfigFile;
-    public static final HashMap<Player,Boolean> flyEnabled = new HashMap<>();
+    public static final HashMap<Player, Boolean> flyEnabled = new HashMap<>();
     public static final HashMap<Player, ArrayList<Player>> tpas = new HashMap<>();
-    public static final HashMap<Player,Player> lastMsg = new HashMap<>();
-    private static HashMap<String,String> fallbackLangMap;
+    public static final HashMap<Player, Player> lastMsg = new HashMap<>();
+    public static final HashMap<Player, Boolean> godMode = new HashMap<>();
+    private static HashMap<String, String> fallbackLangMap;
     private static FileConfiguration langConfig;
     @SuppressWarnings("SpellCheckingInspection")
     public void onEnable() {
@@ -93,6 +94,7 @@ public final class EssentialsM extends JavaPlugin
         Objects.requireNonNull(this.getCommand("spawnmob")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Spawnmob());
         Objects.requireNonNull(this.getCommand("tpall")).setExecutor(new Tpall());
         Objects.requireNonNull(this.getCommand("tpall")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
+        Objects.requireNonNull(this.getCommand("sudo")).setExecutor(new Sudo());
         Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
@@ -164,8 +166,8 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("Gamemodes.Adventure","Adventure");
         fallbackLangMap.put("Gamemodes.Spectator","Spectator");
         fallbackLangMap.put("SetPlayerFlyMode","§aDu hast §6%s §aFlugmodus §6%§a!");
-        fallbackLangMap.put("FlyModes.Disabled","deaktiviert");
-        fallbackLangMap.put("FlyModes.Enabled","aktiviert");
+        fallbackLangMap.put("Modes.Disabled","deaktiviert");
+        fallbackLangMap.put("Modes.Enabled","aktiviert");
         fallbackLangMap.put("TeleportedPlayer","§aDu hast §6%§a zu §6%§a teleportiert!");
         fallbackLangMap.put("InvalidCoordinates","§cUngültige Koordinaten!");
         fallbackLangMap.put("HealedPlayer","§aDu hast den Spieler §6%§a geheilt!");
@@ -190,6 +192,7 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("SpawnedMobs", "§aEs wurde/n % gespawnt!");
         fallbackLangMap.put("AllPlayers", "alle Spieler");
         fallbackLangMap.put("EasterEgg","§aGratuliere du hast den Easteregg Befehl gefunden!");
+        fallbackLangMap.put("CommandExecutedSuccessfully", "§aDer Befehl wurde erfolgreich ausgeführt!");
 
         fallbackLangMap.put("OnlyPlayersCanRunThisCommand","§cNur Spieler können diesen Befehl ausführen!");
         fallbackLangMap.put("PlayerNotFound","§cDer Spieler wurde nicht gefunden!");

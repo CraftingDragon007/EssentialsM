@@ -18,10 +18,13 @@
 
 package ch.gamepowerx.essentialsm;
 
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.*;
 
 import java.util.List;
@@ -55,6 +58,14 @@ public class Listeners implements Listener {
         //noinspection SpellCheckingInspection
         if(player.hasPermission("essentialsm.colorchat")){
             event.setMessage(ChatColor.translateAlternateColorCodes('&', event.getMessage()));
+        }
+    }
+
+    @EventHandler
+    public void onEntityDamageEvent(EntityDamageEvent event){
+        if(event.getEntity() instanceof Player player){
+            event.setCancelled(true);
+            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "-" + event.getDamage() + "HP!"));
         }
     }
 }

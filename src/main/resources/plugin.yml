@@ -1,5 +1,5 @@
 name: EssentialsM
-version: ${project.version}
+version: '${version}'
 main: ch.gamepowerx.essentialsm.EssentialsM
 api-version: 1.15
 author: CraftingDragon007
@@ -97,6 +97,14 @@ commands:
     usage: /ever
     aliases:
       - essentialsmversion
+  sudo:
+    description: Führt Befehle als andere Spieler aus
+    permission: essentialsm.sudo
+    usage: /sudo <Spieler> <Befehl>
+  godmode:
+    description: Du bist unsterblich!
+    permission: essentialsm.godmode
+    usage: /godmode (Spieler)
 
 permissions:
   essentialsm.*:
@@ -114,6 +122,8 @@ permissions:
       essentialsm.msg: true
       essentialsm.spawnmob: true
       essentialsm.tpall: true
+      essentialsm.version: true
+      essentialsm.sudo: true
   essentialsm.gamemode:
     description: Zugriff auf alle Gamemodes!
     default: op
@@ -152,4 +162,7 @@ permissions:
     default: op
   essentialsm.version:
     description: Zugriff auf /ever
+    default: op
+  essentialsm.sudo:
+    description: Zugriff auf /sudo
     default: op

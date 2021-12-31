@@ -36,11 +36,11 @@ public class Fly implements CommandExecutor {
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);
                     String[] text = getLang("SetPlayerFlyMode").split("%");
-                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Disabled"));
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("Modes.Disabled"));
                 }else if(!player.getAllowFlight()){
                     player.setAllowFlight(true);
                     String[] text = getLang("SetPlayerFlyMode").split("%");
-                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("Modes.Enabled"));
                 }
             }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Fly <Player>"));
         }else if(args.length==1){
@@ -51,12 +51,12 @@ public class Fly implements CommandExecutor {
                     player.setAllowFlight(false);
                     flyEnabled.put(player,false);
                     String[] text = getLang("SetPlayerFlyMode").split("%");
-                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Disabled"));
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("Modes.Disabled"));
                 }else if(!player.getAllowFlight()){
                     player.setAllowFlight(true);
                     flyEnabled.put(player,true);
                     String[] text = getLang("SetPlayerFlyMode").split("%");
-                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("FlyModes.Enabled"));
+                    sender.sendMessage(PREFIX + text[0] + player.getName() + text[1] + getLang("Modes.Enabled"));
                 }
             }else sender.sendMessage(EssentialsM.PREFIX + getLang("PlayerNotFound"));
         }else sender.sendMessage(EssentialsM.PREFIX + getLang("FalseArgs").replace("%","/Fly (Player)"));

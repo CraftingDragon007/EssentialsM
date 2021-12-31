@@ -8,7 +8,8 @@ Gamemodes:
   Adventure: "Adventure"
   Spectator: "Spectator"
 SetPlayerFlyMode: "§aDu hast §6%s §aFlugmodus §6%§a!"
-FlyModes:
+GodMode: "§6GodMode "
+Modes:
   Disabled: "deaktiviert"
   Enabled: "aktiviert"
 TeleportedPlayer: "§aDu hast §6%§a zu §6%§a teleportiert!"
@@ -35,6 +36,7 @@ TeleportedHere: "§aDu hast §6%§a zu dir teleportiert!"
 AllPlayers: "alle Spieler"
 SpawnedMobs: "§aEs wurde/n % gespawnt!"
 OnlyPlayersCanRunThisCommand: "§cNur Spieler können diesen Befehl ausführen!"
+CommandExecutedSuccessfully: "§aDer Befehl wurde erfolgreich ausgeführt!"
 PlayerNotFound: "§cDer Spieler wurde nicht gefunden!"
 FalseArgs: "§cUngültige Argumente! Bitte verwende: %"
 FalseArg: "§cUngültiges Argument/e!"
