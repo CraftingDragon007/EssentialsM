@@ -11,7 +11,7 @@ import static ch.gamepowerx.essentialsm.EssentialsM.*;
 public class Sudo implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(args.length == 2){
+        if(args.length >= 2){
             Player target = Bukkit.getPlayerExact(args[0]);
             StringBuilder message = new StringBuilder();
             int count = 1;
