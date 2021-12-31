@@ -95,6 +95,7 @@ public final class EssentialsM extends JavaPlugin
         Objects.requireNonNull(this.getCommand("tpall")).setExecutor(new Tpall());
         Objects.requireNonNull(this.getCommand("tpall")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
         Objects.requireNonNull(this.getCommand("sudo")).setExecutor(new Sudo());
+        Objects.requireNonNull(this.getCommand("godmode")).setExecutor(new GodMode());
         Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
@@ -193,6 +194,7 @@ public final class EssentialsM extends JavaPlugin
         fallbackLangMap.put("AllPlayers", "alle Spieler");
         fallbackLangMap.put("EasterEgg","§aGratuliere du hast den Easteregg Befehl gefunden!");
         fallbackLangMap.put("CommandExecutedSuccessfully", "§aDer Befehl wurde erfolgreich ausgeführt!");
+        fallbackLangMap.put("GodMode", "§6GodMode ");
 
         fallbackLangMap.put("OnlyPlayersCanRunThisCommand","§cNur Spieler können diesen Befehl ausführen!");
         fallbackLangMap.put("PlayerNotFound","§cDer Spieler wurde nicht gefunden!");

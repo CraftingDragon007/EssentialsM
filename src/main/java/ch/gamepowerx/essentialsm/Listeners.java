@@ -64,8 +64,10 @@ public class Listeners implements Listener {
     @EventHandler
     public void onEntityDamageEvent(EntityDamageEvent event){
         if(event.getEntity() instanceof Player player){
-            event.setCancelled(true);
-            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "-" + event.getDamage() + "HP!"));
+            if(godMode.getOrDefault(player, false)){
+                event.setCancelled(true);
+                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "-" + event.getDamage() + "HP!"));
+            }
         }
     }
 }
