@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
+import static ch.gamepowerx.essentialsm.Listeners.godModeStats;
 
 public class GodMode implements CommandExecutor {
     @Override
@@ -20,6 +21,7 @@ public class GodMode implements CommandExecutor {
                     if(godMode.get(player)){
                         godMode.remove(player);
                         godMode.put(player, false);
+                        godModeStats.remove(player);
                         sender.sendMessage(PREFIX + getLang("GodMode") + ChatColor.RED + getLang("Modes.Disabled") + ChatColor.GOLD + "!");
                     }else {
                         godMode.remove(player);
@@ -39,6 +41,7 @@ public class GodMode implements CommandExecutor {
                     if(godMode.get(player)){
                         godMode.remove(player);
                         godMode.put(player, false);
+                        godModeStats.remove(player);
                         sender.sendMessage(PREFIX + getLang("GodMode") + ChatColor.RED + getLang("Modes.Disabled") + ChatColor.GOLD + "!");
                     }else {
                         godMode.remove(player);

@@ -25,13 +25,18 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.*;
 
+import java.text.DecimalFormat;
+import java.util.HashMap;
 import java.util.List;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
 
 public class Listeners implements Listener {
+    public static final HashMap<Player, Double> godModeStats = new HashMap<>();
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
         event.setJoinMessage("");
@@ -66,7 +71,21 @@ public class Listeners implements Listener {
         if(event.getEntity() instanceof Player player){
             if(godMode.getOrDefault(player, false)){
                 event.setCancelled(true);
-                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "-" + event.getDamage() + "HP!"));
+                double i = godModeStats.getOrDefault(player, 0D);
+                i += event.getDamage();
+                DecimalFormat df = new DecimalFormat("#.#");
+                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "-" + df.format(event.getDamage()) + "HP! " + ChatColor.GOLD + df.format(i) + "HP Total!"));
+                godModeStats.remove(player);
+                godModeStats.put(player, i);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerHungerEvent(FoodLevelChangeEvent event){
+        if(event.getEntity() instanceof Player player){
+            if(godMode.getOrDefault(player, false)){
+                event.setCancelled(true);
             }
         }
     }
