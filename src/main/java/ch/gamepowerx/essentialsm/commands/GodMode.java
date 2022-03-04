@@ -9,9 +9,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static ch.gamepowerx.essentialsm.EssentialsM.*;
-import static ch.gamepowerx.essentialsm.EssentialsM.getLang;
 import static ch.gamepowerx.essentialsm.Listeners.godModeStats;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class GodMode implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
