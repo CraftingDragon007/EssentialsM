@@ -105,6 +105,12 @@ commands:
     description: Du bist unsterblich!
     permission: essentialsm.godmode
     usage: /godmode (Spieler)
+    aliases: god
+  ec:
+    description: Öffnet das Enderchest eines Spielers
+    permission: essentialsm.ec
+    usage: /ec (Spieler)
+    aliases: enderchest
 
 permissions:
   essentialsm.*:
@@ -165,4 +171,13 @@ permissions:
     default: op
   essentialsm.sudo:
     description: Zugriff auf /sudo
+    default: op
+  essentialsm.godmode:
+    description: Zugriff auf /godmode
+    default: op
+  essentialsm.ec:
+    description: Zugriff auf /ec
+    default: op
+  essentialsm.ec.other:
+    description: Zugriff auf /ec (Spieler)
     default: op

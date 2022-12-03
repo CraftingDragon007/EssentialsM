@@ -96,6 +96,9 @@ public final class EssentialsM extends JavaPlugin
         Objects.requireNonNull(this.getCommand("tpall")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
         Objects.requireNonNull(this.getCommand("sudo")).setExecutor(new Sudo());
         Objects.requireNonNull(this.getCommand("godmode")).setExecutor(new GodMode());
+        Objects.requireNonNull(this.getCommand("godmode")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
+        Objects.requireNonNull(this.getCommand("ec")).setExecutor(new Enderchest());
+        Objects.requireNonNull(this.getCommand("ec")).setTabCompleter(new ch.gamepowerx.essentialsm.tabcompleter.Fly());
         Bukkit.getPluginManager().registerEvents(new Listeners(),this);
         Bukkit.getConsoleSender().sendMessage(EssentialsM.PREFIX + ChatColor.GREEN + "Das Plugin wurde erfolgreich aktiviert!");
     }
